@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aula.cs" />
+    <Compile Include="Grado.cs" />
+    <Compile Include="Horario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seccion.cs" />
   </ItemGroup>
