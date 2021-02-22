@@ -44,7 +44,10 @@
     <Compile Include="Aula.cs" />
     <Compile Include="Grado.cs" />
     <Compile Include="Horario.cs" />
+<<<<<<< HEAD
     <Compile Include="MatriculaDeAlumno.cs" />
+=======
+>>>>>>> 7a6549897bcbf1d833e87ecc2e35f58a4aa24744
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seccion.cs" />
     <Compile Include="TomaDeAsistencia.cs" />
