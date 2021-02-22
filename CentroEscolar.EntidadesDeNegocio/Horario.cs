@@ -6,15 +6,25 @@ using System.Threading.Tasks;
 
 namespace CentroEscolar.EntidadesDeNegocio
 {
-    class Horario
+    public class Horario
     {
         public int Id { get; set; }
 
         public string HorarioDeClase { get; set; }
 
-        public DateTime HoraEntrada { get; set; }
+        public string HoraEntrada { get; set; }
 
-        public DateTime HoraSalida { get; set; }
+        public string HoraSalida { get; set; }
+
+        public Horario() { }
+
+        public Horario(int pId, string pHorarioDeClase, string pHoraEntrada, string pHoraSalida)
+        {
+            Id = pId;
+            HorarioDeClase = pHorarioDeClase;
+            HoraEntrada = pHoraEntrada;
+            HoraSalida = pHoraSalida;
+        }
 
     }
 }
