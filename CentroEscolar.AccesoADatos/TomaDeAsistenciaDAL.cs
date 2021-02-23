@@ -10,7 +10,7 @@ using CentroEscolar.EntidadesDeNegocio;
 
 namespace CentroEscolar.AccesoADatos
 {
-    class TomaDeAsistenciaDAL
+    public class TomaDeAsistenciaDAL
     {
         // Metodo Leer
         public List<TomaDeAsistencia> Obtener()

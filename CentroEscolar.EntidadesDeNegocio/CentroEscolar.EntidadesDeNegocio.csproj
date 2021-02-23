@@ -41,7 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aula.cs" />
+    <Compile Include="Horario.cs" />
+    <Compile Include="MatriculaDeAlumno.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seccion.cs" />
+    <Compile Include="TomaDeAsistencia.cs" />
+    <Compile Include="Administrador.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

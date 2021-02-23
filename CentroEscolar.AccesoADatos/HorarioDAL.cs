@@ -42,7 +42,7 @@ namespace CentroEscolar.AccesoADatos
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
-                string sentencia = "insert into horarios(horario, horaentrada, hora salida) values('{0}', '{1}', '{2}')";
+                string sentencia = "insert into horarios(horario, horaentrada, horasalida) values('{0}', '{1}', '{2}')";
                 string ssql = string.Format(sentencia, pHorario.HorarioDeClase, pHorario.HoraEntrada, pHorario.HoraSalida);
                 SqlCommand comando = new SqlCommand(ssql, con);
                 comando.CommandType = CommandType.Text;
