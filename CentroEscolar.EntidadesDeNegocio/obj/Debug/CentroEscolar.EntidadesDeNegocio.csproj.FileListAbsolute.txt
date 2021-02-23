@@ -1,0 +1,6 @@
+C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.EntidadesDeNegocio\obj\Debug\CentroEscolar.EntidadesDeNegocio.csprojAssemblyReference.cache
+C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.EntidadesDeNegocio\obj\Debug\CentroEscolar.EntidadesDeNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.EntidadesDeNegocio\bin\Debug\CentroEscolar.EntidadesDeNegocio.dll
+C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.EntidadesDeNegocio\bin\Debug\CentroEscolar.EntidadesDeNegocio.pdb
+C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.EntidadesDeNegocio\obj\Debug\CentroEscolar.EntidadesDeNegocio.dll
+C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.EntidadesDeNegocio\obj\Debug\CentroEscolar.EntidadesDeNegocio.pdb
