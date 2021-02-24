@@ -9,7 +9,7 @@ namespace CentroEscolar.EntidadesDeNegocio
     public class Profesor
     {
         public int Id { get; set; }
-        public string DUIEncargado{ get; set; }
+        public string DUI{ get; set; }
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
         public int Edad { get; set; }

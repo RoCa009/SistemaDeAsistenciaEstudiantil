@@ -9,7 +9,7 @@ namespace CentroEscolar.EntidadesDeNegocio
     public class Grado
     {
         public int Id { get; set; }
-        public string DUI { get; set; }
+        public string GradoAsignado { get; set; }
         public int IdSeccion { get; set; }
         public int IdHorario { get; set; }
         public int IdAula { get; set; }
