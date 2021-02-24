@@ -9,6 +9,15 @@ namespace CentroEscolar.EntidadesDeNegocio
     public class Seccion
     {
         public int Id { get; set; }
+
         public int SeccionAsignada { get; set; }
+
+        public Seccion() { }
+
+        public Seccion(int pId, int pSeccionAsignada)
+        {
+            Id = pId;
+            SeccionAsignada = pSeccionAsignada;
+        }
     }
 }
