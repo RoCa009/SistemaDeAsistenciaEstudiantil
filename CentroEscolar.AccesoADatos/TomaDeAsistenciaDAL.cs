@@ -35,7 +35,7 @@ namespace CentroEscolar.AccesoADatos
 
             return ListaTomaDeAsistencias;
         }
-
+      
         //Metodo Agregar
         public int Agregar(TomaDeAsistencia pTomaDeAsistencia)
         {

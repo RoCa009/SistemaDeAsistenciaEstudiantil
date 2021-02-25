@@ -8,17 +8,22 @@
 <h2>Listado De Tomas De Asistencia</h2>
 
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#miModal">
-    Nuevo Horario
+    Tomar Asistencia
 </button>
 <br /><br />
 
-<table id="horarios" class="table table-bordered table-striped">
+<table id="tomadeasistencias" class="table table-bordered table-striped">
     <thead>
         <tr>
             <td>Id</td>
-            <td>Horario De Clase</td>
-            <td>Hora Entrada</td>
-            <td>Hora Salida</td>
+            <td>Fecha</td>
+            <td>IdProfesor</td>
+            <td>IdAlumno</td>
+            <td>IdGrado</td>
+            <td>IdSeccion</td>
+            <td>Asistencia</td>
+            <td>Llego Tarde</td>
+            <td>Justificacón De Llegada Tarde</td>
         </tr>
     </thead>
     <tbody></tbody>
@@ -29,7 +34,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Horario</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Toma De Asistencia</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="Limpiar()">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -40,18 +45,43 @@
                     <input type="hidden" id="Id" name="Id" />
 
                     <div class="form-group">
-                        <label>Horario De Clase</label>
-                        <input type="text" id="HorarioDeClase" name="HorarioDeClase" class="form-control" />
+                        <label>Fecha</label>
+                        <input type="date" id="Fecha" name="Fecha" class="form-control" />
                     </div>
 
                     <div class="form-group">
-                        <label>Hora Entrada</label>
-                        <input type="text" id="HoraEntrada" name="HoraEntrada" class="form-control" />
+                        <label>IdProfesor</label>
+                        <input type="number" id="IdProfesor" name="IdProfesor" class="form-control" />
                     </div>
 
                     <div class="form-group">
-                        <label>Hora Salida</label>
-                        <input type="text" id="HoraSalida" name="HoraSalida" class="form-control" />
+                        <label>IdAlumno</label>
+                        <input type="number" id="IdAlumno" name="IdAlumno" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>IdGrado</label>
+                        <input type="number" id="IdGrado" name="IdGrado" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>IdSeccion</label>
+                        <input type="number" id="IdSeccion" name="IdSeccion" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Asistencia</label>
+                        <input type="text" id="Asistencia" name="Asistencia" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>LlegoTarde</label>
+                        <input type="text" id="LlegoTarde" name="LlegoTarde" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>JustificacionLlegadaTarde</label>
+                        <input type="text" id="JustificacionLlegadaTarde" name="JustificacionLlegadaTarde" class="form-control" />
                     </div>
 
                     <div class="form-group">

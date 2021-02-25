@@ -44,7 +44,7 @@ namespace CentroEscolar.AccesoADatos
             {
                 con.Open();
                 string sentencia = "insert into grados(id, gradoasignado, idprofesor, idseccion, idhorario, idaula) values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')";
-                string ssql = string.Format(sentencia, pGrado.Id, pGrado);
+                string ssql = string.Format(sentencia, pGrado.Id, pGrado.GradoAsignado, pGrado.IdProfesor, pGrado.IdSeccion, pGrado.IdHorario, pGrado.IdAula);
                 SqlCommand comando = new SqlCommand(ssql, con);
                 comando.CommandType = CommandType.Text;
                 resultado = comando.ExecuteNonQuery();

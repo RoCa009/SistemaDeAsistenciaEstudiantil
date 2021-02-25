@@ -16,7 +16,7 @@ namespace CentroEscolar.AccesoADatos
         public List<Horario> Obtener()
         {
             List<Horario> ListaHorarios = new List<Horario>();
-            using(SqlConnection con = Conexion.Conectar())
+            using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
                 string ssql = "select * from horarios";
@@ -97,12 +97,12 @@ namespace CentroEscolar.AccesoADatos
         {
             Horario horario = new Horario();
             using (SqlConnection con = Conexion.Conectar())
-            {            
+            {
                 con.Open();
                 string sentencia = "select * from horarios where id={0}";
                 string ssql = string.Format(sentencia, pId);
                 SqlCommand comando = new SqlCommand(ssql, con);
-                comando.CommandType = CommandType.Text;                
+                comando.CommandType = CommandType.Text;
                 IDataReader reader = comando.ExecuteReader();
 
                 if (reader.Read())

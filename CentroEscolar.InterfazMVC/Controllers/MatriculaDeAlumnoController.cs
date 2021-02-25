@@ -9,11 +9,11 @@ using CentroEscolar.LogicaDeNegocio;
 
 namespace CentroEscolar.InterfazMVC.Controllers
 {
-    public class TomaDeAsistenciaController : Controller
+    public class MatriculaDeAlumnoController : Controller
     {
-        TomaDeAsistenciaBL tomadeasistencia = new TomaDeAsistenciaBL();
+        MatriculaDeAlumnoBL matriculadealumno = new MatriculaDeAlumnoBL();
 
-        // GET: TomaDeAsistencia
+        // Mostrar
         public ActionResult Index()
         {
             return View();
@@ -22,7 +22,7 @@ namespace CentroEscolar.InterfazMVC.Controllers
         // Obtener 
         public JsonResult Obtener()
         {
-            return Json(tomadeasistencia.Obtener(), JsonRequestBehavior.AllowGet);
+            return Json(matriculadealumno.Obtener(), JsonRequestBehavior.AllowGet);
         }
     }
 }
