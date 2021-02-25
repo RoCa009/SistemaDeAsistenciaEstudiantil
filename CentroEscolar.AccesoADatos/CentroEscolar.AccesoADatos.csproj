@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdministradorDAL.cs" />
+    <Compile Include="AulaDAL.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="HorarioDAL.cs" />
     <Compile Include="MatriculaDeAlumnoDAL.cs" />
