@@ -16,7 +16,7 @@ namespace CentroEscolar.AccesoADatos
         public List<Horario> Obtener()
         {
             List<Horario> ListaHorarios = new List<Horario>();
-            using(SqlConnection con = Conexion.Conectar())
+            using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
                 string ssql = "select * from horarios";
@@ -42,8 +42,8 @@ namespace CentroEscolar.AccesoADatos
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
-                string sentencia = "insert into horarios(id, horariodeclase, horaentrada, horasalida) values('{0}', '{1}', '{2}', '{3}')";
-                string ssql = string.Format(sentencia, pHorario.Id ,pHorario.HorarioDeClase, pHorario.HoraEntrada, pHorario.HoraSalida);
+                string sentencia = "insert into horarios(horariodeclase, horaentrada, horasalida) values('{0}', '{1}', '{2}')";
+                string ssql = string.Format(sentencia, pHorario.HorarioDeClase, pHorario.HoraEntrada, pHorario.HoraSalida);
                 SqlCommand comando = new SqlCommand(ssql, con);
                 comando.CommandType = CommandType.Text;
                 resultado = comando.ExecuteNonQuery();
@@ -61,7 +61,7 @@ namespace CentroEscolar.AccesoADatos
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
-                string sentencia = "update horarios set horariodeclase='{1}', horaentrada='{2}', horasalida='{3}' where id={0} ";
+                string sentencia = "update horarios set horariodeclase='{0}', horaentrada='{1}', horasalida='{2}' where id={3} ";
                 string ssql = string.Format(sentencia, pHorario.HorarioDeClase, pHorario.HoraEntrada, pHorario.HoraSalida, pHorario.Id);
                 SqlCommand comando = new SqlCommand(ssql, con);
                 comando.CommandType = CommandType.Text;
@@ -97,12 +97,12 @@ namespace CentroEscolar.AccesoADatos
         {
             Horario horario = new Horario();
             using (SqlConnection con = Conexion.Conectar())
-            {            
+            {
                 con.Open();
                 string sentencia = "select * from horarios where id={0}";
                 string ssql = string.Format(sentencia, pId);
                 SqlCommand comando = new SqlCommand(ssql, con);
-                comando.CommandType = CommandType.Text;                
+                comando.CommandType = CommandType.Text;
                 IDataReader reader = comando.ExecuteReader();
 
                 if (reader.Read())

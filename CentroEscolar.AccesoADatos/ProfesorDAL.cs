@@ -43,7 +43,7 @@ namespace CentroEscolar.AccesoADatos
             {
                 con.Open();
                 string sentencia = "insert into profesores(id, dui, nombres, apellidos, edad, sexo, direccion, telefono, correo) values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}')";
-                string ssql = string.Format(sentencia, pProfesor.Id, pProfesor);
+                string ssql = string.Format(sentencia, pProfesor.Id, pProfesor.DUI, pProfesor.Nombres, pProfesor.Apellidos, pProfesor.Edad, pProfesor.Sexo, pProfesor.Direccion, pProfesor.Telefono, pProfesor.Correo);
                 SqlCommand comando = new SqlCommand(ssql, con);
                 comando.CommandType = CommandType.Text;
                 resultado = comando.ExecuteNonQuery();
