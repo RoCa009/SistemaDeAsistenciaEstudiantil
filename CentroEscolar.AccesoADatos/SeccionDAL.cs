@@ -10,40 +10,40 @@ using CentroEscolar.EntidadesDeNegocio;
 
 namespace CentroEscolar.AccesoADatos
 {
-    public class HorarioDAL
+    public class SeccionDAL
     {
         // Metodo Leer
-        public List<Horario> Obtener()
+        public List<Seccion> Obtener()
         {
-            List<Horario> ListaHorarios = new List<Horario>();
-            using(SqlConnection con = Conexion.Conectar())
+            List<Seccion> ListaSecciones = new List<Seccion>();
+            using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
-                string ssql = "select * from horarios";
+                string ssql = "select * from secciones";
                 SqlCommand comando = new SqlCommand(ssql, con);
                 comando.CommandType = CommandType.Text;
                 IDataReader reader = comando.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    ListaHorarios.Add(new Horario(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3)));
+                    ListaSecciones.Add(new Seccion(reader.GetInt32(0), reader.GetInt32(1)));
                 }
 
                 con.Close();
             }
 
-            return ListaHorarios;
+            return ListaSecciones;
         }
 
         //Metodo Agregar
-        public int Agregar(Horario pHorario)
+        public int Agregar(Seccion pSeccion)
         {
             int resultado = 0;
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
-                string sentencia = "insert into horarios(id, horariodeclase, horaentrada, horasalida) values('{0}', '{1}', '{2}', '{3}')";
-                string ssql = string.Format(sentencia, pHorario.Id ,pHorario.HorarioDeClase, pHorario.HoraEntrada, pHorario.HoraSalida);
+                string sentencia = "insert into secciones(id, secciones) values('{0}', '{1}')";
+                string ssql = string.Format(sentencia, pSeccion.Id, pSeccion.SeccionAsignada);
                 SqlCommand comando = new SqlCommand(ssql, con);
                 comando.CommandType = CommandType.Text;
                 resultado = comando.ExecuteNonQuery();
@@ -55,14 +55,14 @@ namespace CentroEscolar.AccesoADatos
         }
 
         //Metodo Modificar
-        public int Modificar(Horario pHorario)
+        public int Modificar(Seccion pSeccion)
         {
             int resultado = 0;
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
-                string sentencia = "update horarios set horariodeclase='{1}', horaentrada='{2}', horasalida='{3}' where id={0} ";
-                string ssql = string.Format(sentencia, pHorario.HorarioDeClase, pHorario.HoraEntrada, pHorario.HoraSalida, pHorario.Id);
+                string sentencia = "update secciones(id, seccionasignada) values('{0}', '{1}')";
+                string ssql = string.Format(sentencia, pSeccion.Id, pSeccion.SeccionAsignada);
                 SqlCommand comando = new SqlCommand(ssql, con);
                 comando.CommandType = CommandType.Text;
                 resultado = comando.ExecuteNonQuery();
@@ -80,7 +80,7 @@ namespace CentroEscolar.AccesoADatos
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
-                string sentencia = "delete from horarios where id={0} ";
+                string sentencia = "delete from secciones where id={0} ";
                 string ssql = string.Format(sentencia, pId);
                 SqlCommand comando = new SqlCommand(ssql, con);
                 comando.CommandType = CommandType.Text;
@@ -93,30 +93,28 @@ namespace CentroEscolar.AccesoADatos
         }
 
         // Metodo BuscarPorId
-        public static Horario BuscarPorId(int pId)
+        public static Seccion BuscarPorId(int pId)
         {
-            Horario horario = new Horario();
+            Seccion Seccion = new Seccion();
             using (SqlConnection con = Conexion.Conectar())
-            {            
+            {
                 con.Open();
-                string sentencia = "select * from horarios where id={0}";
+                string sentencia = "select * from secciones where id={0}";
                 string ssql = string.Format(sentencia, pId);
                 SqlCommand comando = new SqlCommand(ssql, con);
-                comando.CommandType = CommandType.Text;                
+                comando.CommandType = CommandType.Text;
                 IDataReader reader = comando.ExecuteReader();
 
                 if (reader.Read())
                 {
-                    horario.Id = reader.GetInt32(0);
-                    horario.HorarioDeClase = reader.GetString(1);
-                    horario.HoraEntrada = reader.GetString(2);
-                    horario.HoraSalida = reader.GetString(3);
+                    Seccion.Id = reader.GetInt32(0);
+                    Seccion.SeccionAsignada = reader.GetInt32(1);
                 }
 
                 con.Close();
             }
 
-            return horario;
+            return Seccion;
         }
     }
 }
