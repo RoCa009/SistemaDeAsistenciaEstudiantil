@@ -42,8 +42,8 @@ namespace CentroEscolar.AccesoADatos
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
-                string sentencia = "insert into profesores(id, dui, nombres, apellidos, edad, sexo, direccion, telefono, correo) values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}')";
-                string ssql = string.Format(sentencia, pProfesor.Id, pProfesor.DUI, pProfesor.Nombres, pProfesor.Apellidos, pProfesor.Edad, pProfesor.Sexo, pProfesor.Direccion, pProfesor.Telefono, pProfesor.Correo);
+                string sentencia = "insert into profesores(dui, nombres, apellidos, edad, sexo, direccion, telefono, correo) values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')";
+                string ssql = string.Format(sentencia, pProfesor.DUI, pProfesor.Nombres, pProfesor.Apellidos, pProfesor.Edad, pProfesor.Sexo, pProfesor.Direccion, pProfesor.Telefono, pProfesor.Correo);
                 SqlCommand comando = new SqlCommand(ssql, con);
                 comando.CommandType = CommandType.Text;
                 resultado = comando.ExecuteNonQuery();
@@ -61,8 +61,8 @@ namespace CentroEscolar.AccesoADatos
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
-                string sentencia = "update profesores(id, dui, nombres, apellidos, edad, sexo, direccion, telefono, correo) values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}')";
-                string ssql = string.Format(sentencia, pProfesor.Id, pProfesor.DUI, pProfesor.Nombres, pProfesor.Apellidos, pProfesor.Edad, pProfesor.Sexo, pProfesor.Direccion, pProfesor.Direccion, pProfesor.Telefono, pProfesor.Correo);
+                string sentencia = "update profesores set dui='{0}', nombres='{1}', apellidos='{2}', edad='{3}', sexo='{4}', direccion='{5}', telefono='{6}', correo='{7}' where id={8}";
+                string ssql = string.Format(sentencia, pProfesor.DUI, pProfesor.Nombres, pProfesor.Apellidos, pProfesor.Edad, pProfesor.Sexo, pProfesor.Direccion, pProfesor.Direccion, pProfesor.Telefono, pProfesor.Correo, pProfesor.Id);
                 SqlCommand comando = new SqlCommand(ssql, con);
                 comando.CommandType = CommandType.Text;
                 resultado = comando.ExecuteNonQuery();

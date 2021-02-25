@@ -42,8 +42,8 @@ namespace CentroEscolar.AccesoADatos
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
-                string sentencia = "insert into secciones(id, secciones) values('{0}', '{1}')";
-                string ssql = string.Format(sentencia, pSeccion.Id, pSeccion.SeccionAsignada);
+                string sentencia = "insert into secciones(secciones) values('{0}')";
+                string ssql = string.Format(sentencia, pSeccion.SeccionAsignada);
                 SqlCommand comando = new SqlCommand(ssql, con);
                 comando.CommandType = CommandType.Text;
                 resultado = comando.ExecuteNonQuery();
@@ -61,8 +61,8 @@ namespace CentroEscolar.AccesoADatos
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
-                string sentencia = "update secciones(id, seccionasignada) values('{0}', '{1}')";
-                string ssql = string.Format(sentencia, pSeccion.Id, pSeccion.SeccionAsignada);
+                string sentencia = "update secciones set seccionasignada='{0}' where id={1}";
+                string ssql = string.Format(sentencia, pSeccion.SeccionAsignada, pSeccion.Id);
                 SqlCommand comando = new SqlCommand(ssql, con);
                 comando.CommandType = CommandType.Text;
                 resultado = comando.ExecuteNonQuery();
