@@ -42,10 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdministradorDAL.cs" />
+    <Compile Include="AulaDAL.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="GradoDAL.cs" />
     <Compile Include="HorarioDAL.cs" />
     <Compile Include="MatriculaDeAlumnoDAL.cs" />
+    <Compile Include="ProfesorDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeccionDAL.cs" />
     <Compile Include="TomaDeAsistenciaDAL.cs" />
   </ItemGroup>
   <ItemGroup>

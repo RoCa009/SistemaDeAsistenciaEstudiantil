@@ -12,6 +12,8 @@ namespace CentroEscolar.EntidadesDeNegocio
 
         public string GradoAsignado { get; set; }
 
+        public int IdProfesor { get; set; }
+
         public int IdSeccion { get; set; }
 
         public int IdHorario { get; set; }
@@ -20,10 +22,11 @@ namespace CentroEscolar.EntidadesDeNegocio
 
         public Grado() { }
 
-        public Grado(int pId, string pGradoAsignado, int pIdSeccion, int pIdHorario, int pIdAula)
+        public Grado(int pId, string pGradoAsignado, int pIdProfesor, int pIdSeccion, int pIdHorario, int pIdAula)
         {
             Id = pId;
             GradoAsignado = pGradoAsignado;
+            IdProfesor = pIdProfesor;
             IdSeccion = pIdSeccion;
             IdHorario = pIdHorario;
             IdAula = pIdAula;

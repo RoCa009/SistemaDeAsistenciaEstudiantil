@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<h2>Listado De Tomas De Asistencia</h2>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#miModal">
+    Nuevo Horario
+</button>
+<br /><br />
+
+<table id="horarios" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Horario De Clase</td>
+            <td>Hora Entrada</td>
+            <td>Hora Salida</td>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<!----------------- Ventana Modal ------------------------------------->
+<div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Horario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="Limpiar()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <form id="frmHorarios">
+                    <input type="hidden" id="Id" name="Id" />
+
+                    <div class="form-group">
+                        <label>Horario De Clase</label>
+                        <input type="text" id="HorarioDeClase" name="HorarioDeClase" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Hora Entrada</label>
+                        <input type="text" id="HoraEntrada" name="HoraEntrada" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Hora Salida</label>
+                        <input type="text" id="HoraSalida" name="HoraSalida" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" name="btnAgregar" value="Agregar" class="btn btn-primary" />
+                    </div>
+
+                </form>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="Limpiar()">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fin de la ventana Modal -->
+
+<script src="~/Scripts/HorariosAjax.js"></script>

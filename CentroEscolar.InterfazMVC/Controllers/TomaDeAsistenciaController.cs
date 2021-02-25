@@ -9,11 +9,9 @@ using CentroEscolar.LogicaDeNegocio;
 
 namespace CentroEscolar.InterfazMVC.Controllers
 {
-    public class HorarioController : Controller
+    public class TomaDeAsistenciaController : Controller
     {
-        HorarioBL horario = new HorarioBL();
-
-        // Mostrar
+        // GET: TomaDeAsistencia
         public ActionResult Index()
         {
             return View();
@@ -24,6 +22,5 @@ namespace CentroEscolar.InterfazMVC.Controllers
         {
             return Json(horario.Obtener(), JsonRequestBehavior.AllowGet);
         }
-
     }
 }
