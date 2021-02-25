@@ -13,12 +13,17 @@ namespace CentroEscolar.InterfazMVC.Controllers
     {
         HorarioBL horario = new HorarioBL();
 
-        // Obtener: Horario
+        // Mostrar
         public ActionResult Index()
         {
             return View();
         }
 
+        // Obtener Planta
+        public JsonResult Obtener()
+        {
+            return Json(horario.Obtener(), JsonRequestBehavior.AllowGet);
+        }
 
     }
 }

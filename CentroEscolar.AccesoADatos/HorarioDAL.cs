@@ -42,7 +42,7 @@ namespace CentroEscolar.AccesoADatos
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
-                string sentencia = "insert into horarios(horario, horaentrada, horasalida) values('{0}', '{1}', '{2}')";
+                string sentencia = "insert into horarios(horariodeclase, horaentrada, horasalida) values('{0}', '{1}', '{2}')";
                 string ssql = string.Format(sentencia, pHorario.HorarioDeClase, pHorario.HoraEntrada, pHorario.HoraSalida);
                 SqlCommand comando = new SqlCommand(ssql, con);
                 comando.CommandType = CommandType.Text;
@@ -61,7 +61,7 @@ namespace CentroEscolar.AccesoADatos
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
-                string sentencia = "update horarios set horario='{0}', horaentrada='{1}', horasalida='{2}' where id={3} ";
+                string sentencia = "update horarios set horariodeclase='{0}', horaentrada='{1}', horasalida='{2}' where id={3} ";
                 string ssql = string.Format(sentencia, pHorario.HorarioDeClase, pHorario.HoraEntrada, pHorario.HoraSalida, pHorario.Id);
                 SqlCommand comando = new SqlCommand(ssql, con);
                 comando.CommandType = CommandType.Text;

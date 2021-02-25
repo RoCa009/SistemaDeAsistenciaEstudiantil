@@ -1,9 +1,9 @@
-C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.AccesoADatos\obj\Debug\CentroEscolar.AccesoADatos.csprojAssemblyReference.cache
-C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.AccesoADatos\obj\Debug\CentroEscolar.AccesoADatos.csproj.CoreCompileInputs.cache
 C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.AccesoADatos\bin\Debug\CentroEscolar.AccesoADatos.dll
 C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.AccesoADatos\bin\Debug\CentroEscolar.AccesoADatos.pdb
 C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.AccesoADatos\bin\Debug\CentroEscolar.EntidadesDeNegocio.dll
 C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.AccesoADatos\bin\Debug\CentroEscolar.EntidadesDeNegocio.pdb
+C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.AccesoADatos\obj\Debug\CentroEscolar.AccesoADatos.csprojAssemblyReference.cache
+C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.AccesoADatos\obj\Debug\CentroEscolar.AccesoADatos.csproj.CoreCompileInputs.cache
 C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.AccesoADatos\obj\Debug\CentroEscolar.AccesoADatos.csproj.CopyComplete
 C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.AccesoADatos\obj\Debug\CentroEscolar.AccesoADatos.dll
 C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.AccesoADatos\obj\Debug\CentroEscolar.AccesoADatos.pdb
