@@ -42,9 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdministradorBL.cs" />
+    <Compile Include="AulaBL.cs" />
+    <Compile Include="GradoBL.cs" />
     <Compile Include="HorarioBL.cs" />
     <Compile Include="MatriculaDeAlumnoBL.cs" />
+    <Compile Include="ProfesorBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeccionBL.cs" />
     <Compile Include="TomaDeAsistenciaBL.cs" />
   </ItemGroup>
   <ItemGroup>
