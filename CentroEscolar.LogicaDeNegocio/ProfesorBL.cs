@@ -12,19 +12,20 @@ namespace CentroEscolar.LogicaDeNegocio
     public class ProfesorBL
     {
 
-        ProfesorDAL profesor = new ProfesorDAL();
+        ProfesorDAL profesor = new ProfesorDAL();        
 
         public List<Profesor> Obtener()
         {
             return profesor.Obtener();
-        }
+        } 
 
-        public int Agregar(Profesor pProfesor)
+        //Uso del método Agregar
+        public int Agregar (Profesor pProfesor)
         {
             return profesor.Agregar(pProfesor);
         }
 
-        public int Modificar(Profesor pProfesor)
+        public int Modificar (Profesor pProfesor)
         {
             return profesor.Modificar(pProfesor);
         }
@@ -38,5 +39,6 @@ namespace CentroEscolar.LogicaDeNegocio
         {
             return ProfesorDAL.BuscarPorId(pId);
         }
+
     }
 }
