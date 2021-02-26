@@ -42,8 +42,8 @@ namespace CentroEscolar.AccesoADatos
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
-                string sentencia = "insert into aulas(id, numerodeaula) values('{0}', '{1}')";
-                string ssql = string.Format(sentencia, pAula.Id, pAula.NumeroDeAula);
+                string sentencia = "insert into aulas(numerodeaula) values('{0}')";
+                string ssql = string.Format(sentencia, pAula.NumeroDeAula);
                 SqlCommand comando = new SqlCommand(ssql, con);
                 comando.CommandType = CommandType.Text;
                 resultado = comando.ExecuteNonQuery();
@@ -61,8 +61,8 @@ namespace CentroEscolar.AccesoADatos
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
-                string sentencia = "update Aulas set numerodeaula='{1}' where id={0} ";
-                string ssql = string.Format(sentencia, pAula.Id, pAula.NumeroDeAula);
+                string sentencia = "update aulas set numerodeaula='{0}' where id={1} ";
+                string ssql = string.Format(sentencia, pAula.NumeroDeAula, pAula.Id);
                 SqlCommand comando = new SqlCommand(ssql, con);
                 comando.CommandType = CommandType.Text;
                 resultado = comando.ExecuteNonQuery();

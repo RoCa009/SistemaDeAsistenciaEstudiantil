@@ -1,26 +1,24 @@
 ﻿
 @{
-    ViewBag.Title = "Administración";
+    ViewBag.Title = "Index";
 }
 
-@{
-    ViewBag.MenuLevel = "Administración > Horarios";
-}
+<h2>Index</h2>
 
 <h2>Listado De Horarios</h2>
 
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#miModal">
-    Nuevo Horario
+    Nuevo Administrador
 </button>
 <br /><br />
 
-<table id="horarios" class="table table-bordered table-striped">
+<table id="administradores" class="table table-bordered table-striped">
     <thead>
         <tr>
             <td>Id</td>
-            <td>Horario De Clase</td>
-            <td>Hora Entrada</td>
-            <td>Hora Salida</td>
+            <td>Nombre</td>
+            <td>Correo</td>
+            <td>Contraseña</td>
             <td>Acciones</td>
         </tr>
     </thead>
@@ -32,7 +30,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Crear Horario</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Administradores</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="Limpiar()">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -43,22 +41,22 @@
                     <input type="hidden" id="Id" name="Id" />
 
                     <div class="form-group">
-                        <label>Horario De Clase</label>
-                        <input type="text" id="HorarioDeClase" name="HorarioDeClase" class="form-control" />
+                        <label>Nombre</label>
+                        <input type="text" id="Nombre" name="Nombre" class="form-control" />
                     </div>
 
                     <div class="form-group">
-                        <label>Hora Entrada</label>
-                        <input type="text" id="HoraEntrada" name="HoraEntrada" class="form-control" />
+                        <label>Correo</label>
+                        <input type="text" id="Correo" name="Correo" class="form-control" />
                     </div>
 
                     <div class="form-group">
-                        <label>Hora Salida</label>
-                        <input type="text" id="HoraSalida" name="HoraSalida" class="form-control" />
+                        <label>Contrasena</label>
+                        <input type="password" id="Contrasena" name="Contrasena" class="form-control" />
                     </div>
 
                     <div class="form-group">
-                        <input type="submit" id="btnGuardar" value="Guardar" class="btn btn-primary" />
+                        <input type="submit" name="btnAgregar" value="Agregar" class="btn btn-primary" />
                     </div>
 
                 </form>
@@ -73,4 +71,5 @@
 </div>
 <!-- Fin de la ventana Modal -->
 
-<script src="~/Scripts/HorariosAjax.js"></script>
+<script src="~/Scripts/AdministradorAjax.js"></script>
+

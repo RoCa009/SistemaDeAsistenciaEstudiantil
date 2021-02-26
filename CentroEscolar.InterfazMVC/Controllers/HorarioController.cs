@@ -25,5 +25,30 @@ namespace CentroEscolar.InterfazMVC.Controllers
             return Json(horario.Obtener(), JsonRequestBehavior.AllowGet);
         }
 
+        // BuscarPorId
+        public JsonResult BuscarPorId(int pId)
+        {
+            return Json(horario.BuscarPorId(pId), JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public JsonResult Agregar(Horario pHorario)
+        {
+            return Json(horario.Agregar(pHorario), JsonRequestBehavior.AllowGet);
+        }
+
+        // Modificar
+        [HttpPost]
+        public JsonResult Modificar(Horario pHorario)
+        {
+            return Json(horario.Modificar(pHorario), JsonRequestBehavior.AllowGet);
+        }
+
+        // Eliminar
+        [HttpPost]
+        public JsonResult Eliminar(int pId)
+        {
+            return Json(horario.Eliminar(pId));
+        }
     }
 }

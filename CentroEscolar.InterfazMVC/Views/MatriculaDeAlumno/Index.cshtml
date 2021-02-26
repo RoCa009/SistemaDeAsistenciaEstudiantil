@@ -30,6 +30,7 @@
             <td>IdSeccion</td>
             <td>IdHorario</td>
             <td>IdAula</td>
+            <td>Acciones</td>
         </tr>
     </thead>
     <tbody></tbody>
@@ -62,14 +63,6 @@
                         <input type="text" id="NombreEncargado" name="NombreEncargado" class="form-control" />
                     </div>
 
-                    <td>Nombres Alumno</td>
-                    <td>Apellidos Alumno</td>
-                    <td>Edad</td>
-                    <td>Sexo</td>
-                    <td>Direccion</td>
-                    <td>Telefono</td>
-                    <td>Correo</td>
-
                     <div class="form-group">
                         <label>NombresAlumno</label>
                         <input type="text" id="NombresAlumno" name="NombresAlumno" class="form-control" />
@@ -77,12 +70,27 @@
 
                     <div class="form-group">
                         <label>Edad</label>
-                        <input type="text" id="Edad" name="Edad" class="form-control" />
+                        <input type="number" id="Edad" name="Edad" class="form-control" />
                     </div>
 
                     <div class="form-group">
-                        <label>ApellidosAlumno</label>
-                        <input type="text" id="ApellidosAlumno" name="ApellidosAlumno" class="form-control" />
+                        <label>Sexo</label>
+                        <input type="text" id="Sexo" name="Sexo" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Direccion</label>
+                        <input type="text" id="Direccion" name="Direccion" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Telefono</label>
+                        <input type="text" id="Telefono" name="Telefono" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Correo</label>
+                        <input type="text" id="Correo" name="Correo" class="form-control" />
                     </div>
 
                     <div class="form-group">
@@ -127,5 +135,5 @@
 </div>
 <!-- Fin de la ventana Modal -->
 
-<script src="~/Scripts/HorariosAjax.js"></script>
+<script src="~/Scripts/MatriculaDeAlumno.js"></script>
 

@@ -8,7 +8,6 @@ using System.Data;
 using System.Data.SqlClient;
 using CentroEscolar.EntidadesDeNegocio;
 
-
 namespace CentroEscolar.AccesoADatos
 {
     public class GradoDAL
@@ -43,8 +42,8 @@ namespace CentroEscolar.AccesoADatos
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
-                string sentencia = "insert into grados(id, gradoasignado, idprofesor, idseccion, idhorario, idaula) values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')";
-                string ssql = string.Format(sentencia, pGrado.Id, pGrado.GradoAsignado, pGrado.IdProfesor, pGrado.IdSeccion, pGrado.IdHorario, pGrado.IdAula);
+                string sentencia = "insert into grados(gradoasignado, idprofesor, idseccion, idhorario, idaula) values('{0}', '{1}', '{2}', '{3}', '{4}')";
+                string ssql = string.Format(sentencia, pGrado.GradoAsignado, pGrado.IdProfesor, pGrado.IdSeccion, pGrado.IdHorario, pGrado.IdAula);
                 SqlCommand comando = new SqlCommand(ssql, con);
                 comando.CommandType = CommandType.Text;
                 resultado = comando.ExecuteNonQuery();
@@ -62,8 +61,8 @@ namespace CentroEscolar.AccesoADatos
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
-                string sentencia = "grados(id, gradoasignado, idprofesor, idseccion, idhorario, idaula) values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}'";
-                string ssql = string.Format(sentencia, pGrado.Id, pGrado.GradoAsignado, pGrado.IdProfesor, pGrado.IdSeccion, pGrado.IdHorario, pGrado.IdAula);
+                string sentencia = "update grados set gradoasignado='{0}', idprofesor='{1}', idseccion='{2}', idhorario='{3}', idaula='{4}' where id={5}";
+                string ssql = string.Format(sentencia, pGrado.GradoAsignado, pGrado.IdProfesor, pGrado.IdSeccion, pGrado.IdHorario, pGrado.IdAula, pGrado.Id);
                 SqlCommand comando = new SqlCommand(ssql, con);
                 comando.CommandType = CommandType.Text;
                 resultado = comando.ExecuteNonQuery();
@@ -96,7 +95,7 @@ namespace CentroEscolar.AccesoADatos
         // Metodo BuscarPorId
         public static Grado BuscarPorId(int pId)
         {
-            Grado Grado = new Grado();
+            Grado grado = new Grado();
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
@@ -108,18 +107,18 @@ namespace CentroEscolar.AccesoADatos
 
                 if (reader.Read())
                 {
-                    Grado.Id = reader.GetInt32(0);
-                    Grado.GradoAsignado = reader.GetString(1);
-                    Grado.IdProfesor = reader.GetInt32(2);
-                    Grado.IdSeccion = reader.GetInt32(3);
-                    Grado.IdHorario = reader.GetInt32(4);
-                    Grado.IdAula = reader.GetInt32(5);
+                    grado.Id = reader.GetInt32(0);
+                    grado.GradoAsignado = reader.GetString(1);
+                    grado.IdProfesor = reader.GetInt32(2);
+                    grado.IdSeccion = reader.GetInt32(3);
+                    grado.IdHorario = reader.GetInt32(4);
+                    grado.IdAula = reader.GetInt32(5);
                 }
 
                 con.Close();
             }
 
-            return Grado;
+            return grado;
         }
     }
 }
