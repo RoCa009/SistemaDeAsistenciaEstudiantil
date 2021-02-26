@@ -33,6 +33,10 @@ namespace CentroEscolar.LogicaDeNegocio
             return horario.Eliminar(pId);
         }
 
+        public Horario BuscarPorId(int pId)
+        {
+            return HorarioDAL.BuscarPorId(pId);
+        }
 
     }
 }

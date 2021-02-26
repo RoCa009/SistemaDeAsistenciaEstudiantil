@@ -50,7 +50,6 @@
     <Compile Include="Seccion.cs" />
     <Compile Include="TomaDeAsistencia.cs" />
     <Compile Include="Administrador.cs" />
-    <Compile Include="Usuario.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

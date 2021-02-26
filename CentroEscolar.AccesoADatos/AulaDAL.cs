@@ -61,7 +61,7 @@ namespace CentroEscolar.AccesoADatos
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
-                string sentencia = "update Aulas set numerodeaula='{0}' where id={1} ";
+                string sentencia = "update aulas set numerodeaula='{0}' where id={1} ";
                 string ssql = string.Format(sentencia, pAula.NumeroDeAula, pAula.Id);
                 SqlCommand comando = new SqlCommand(ssql, con);
                 comando.CommandType = CommandType.Text;

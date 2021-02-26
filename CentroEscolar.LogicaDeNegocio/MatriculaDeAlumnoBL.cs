@@ -32,5 +32,10 @@ namespace CentroEscolar.LogicaDeNegocio
         {
             return matriculadealumno.Eliminar(pId);
         }
+
+        public MatriculaDeAlumno BuscarPorId(int pId)
+        {
+            return MatriculaDeAlumnoDAL.BuscarPorId(pId);
+        }
     }
 }

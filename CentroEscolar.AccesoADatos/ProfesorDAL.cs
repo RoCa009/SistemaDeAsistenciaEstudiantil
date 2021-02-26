@@ -26,7 +26,8 @@ namespace CentroEscolar.AccesoADatos
 
                 while (reader.Read())
                 {
-                    ListaProfesores.Add(new Profesor(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetInt32(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8)));
+                    ListaProfesores.Add(new Profesor(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), 
+                        reader.GetInt32(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8)));
                 }
 
                 con.Close();
