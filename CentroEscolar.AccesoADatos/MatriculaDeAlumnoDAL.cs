@@ -44,10 +44,10 @@ namespace CentroEscolar.AccesoADatos
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
-                string sentencia = "insert into matriculadealumnos(dui, nombreencargado, nombresalumno, apellidosalumno," +
+                string sentencia = "insert into matriculadealumnos(duiencargado, nombreencargado, nombresalumno, apellidosalumno," +
                 "edad, sexo, direccion, telefono, correo, idprofesor, idgrado, idseccion, idhorario, idaula) " +
-                "values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '10}', '{11}', '{12}', '{13}', '{14}')";
-                string ssql = string.Format(sentencia, pMatriculaDeAlumno.DUI, pMatriculaDeAlumno.NombreEncargado, pMatriculaDeAlumno.NombresAlumno, pMatriculaDeAlumno.ApellidosAlumno, 
+                "values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}')";
+                string ssql = string.Format(sentencia, pMatriculaDeAlumno.DUIEncargado, pMatriculaDeAlumno.NombreEncargado, pMatriculaDeAlumno.NombresAlumno, pMatriculaDeAlumno.ApellidosAlumno, 
                 pMatriculaDeAlumno.Edad, pMatriculaDeAlumno.Sexo, pMatriculaDeAlumno.Direccion, pMatriculaDeAlumno.Telefono, pMatriculaDeAlumno.Correo,
                 pMatriculaDeAlumno.IdProfesor, pMatriculaDeAlumno.IdGrado, pMatriculaDeAlumno.IdSeccion, pMatriculaDeAlumno.IdHorario, pMatriculaDeAlumno.IdAula);
                 SqlCommand comando = new SqlCommand(ssql, con);
@@ -67,9 +67,9 @@ namespace CentroEscolar.AccesoADatos
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
-                string sentencia = "update matriculadealumnos set dui='{0}', nombreencargado='{1}', nombresalumno='{2}', apellidosalumno='{3}'," +
+                string sentencia = "update matriculadealumnos set duiencargado='{0}', nombreencargado='{1}', nombresalumno='{2}', apellidosalumno='{3}'," +
                 "edad='{4}', sexo='{5}', direccion='{6}', telefono='{7}', correo='{8}', idprofesor='{9}', idgrado='{10}', idseccion='{11}', idhorario='{12}', idaula='{13}' where id={14} ";
-                string ssql = string.Format(sentencia, pMatriculaDeAlumno.DUI, pMatriculaDeAlumno.NombreEncargado, pMatriculaDeAlumno.NombresAlumno, pMatriculaDeAlumno.ApellidosAlumno,
+                string ssql = string.Format(sentencia, pMatriculaDeAlumno.DUIEncargado, pMatriculaDeAlumno.NombreEncargado, pMatriculaDeAlumno.NombresAlumno, pMatriculaDeAlumno.ApellidosAlumno,
                 pMatriculaDeAlumno.Edad, pMatriculaDeAlumno.Sexo, pMatriculaDeAlumno.Direccion, pMatriculaDeAlumno.Telefono, pMatriculaDeAlumno.Correo,
                 pMatriculaDeAlumno.IdProfesor, pMatriculaDeAlumno.IdGrado, pMatriculaDeAlumno.IdSeccion, pMatriculaDeAlumno.IdHorario, pMatriculaDeAlumno.IdAula, pMatriculaDeAlumno.Id);
                 SqlCommand comando = new SqlCommand(ssql, con);
@@ -117,7 +117,7 @@ namespace CentroEscolar.AccesoADatos
                 if (reader.Read())
                 {
                     matriculadealumno.Id = reader.GetInt32(0);
-                    matriculadealumno.DUI = reader.GetString(1);
+                    matriculadealumno.DUIEncargado = reader.GetString(1);
                     matriculadealumno.NombreEncargado = reader.GetString(2);
                     matriculadealumno.NombresAlumno = reader.GetString(3);
                     matriculadealumno.ApellidosAlumno = reader.GetString(4);

@@ -1,6 +1,9 @@
-﻿$(function () {
+﻿
+
+/* $(function () {
     Cargar();
 });
+*/
 
 function Cargar() {
     $.ajax({

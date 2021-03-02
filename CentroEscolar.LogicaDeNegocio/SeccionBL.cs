@@ -11,31 +11,32 @@ namespace CentroEscolar.LogicaDeNegocio
 {
     public class SeccionBL
     {
-        //Creación del objeto seccion
+        // Objeto
         SeccionBL seccion = new SeccionBL();
-
-        //Uso del método Obtener
+        // Obtener
         public List<Seccion> Obtener()
         {
             return seccion.Obtener();
         }
-
-        //Uso del método Agregar 
+        // Agregar 
         public int Agregar (Seccion pSeccion)
         {
             return seccion.Agregar(pSeccion);
         }
-
-        //Uso del método Modificar 
+        // Modificar 
         public int Modificar (Seccion pSeccion)
         {
             return seccion.Modificar(pSeccion);
         }
-
-        //Uso del método Eliminar 
+        // Eliminar 
         public int Eliminar (Seccion pSeccion)
         {
             return seccion.Eliminar(pSeccion);
+        }
+        // BuscarPorId
+        public Seccion BuscarPorId(int pId)
+        {
+            return SeccionDAL.BuscarPorId(pId);
         }
     }
 }

@@ -1,15 +1,16 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Toma De Asistencia";
 
     ViewBag.Section = "Toma De Asistencia";
     ViewBag.SectionLink = "../PanelTomaDeAsistencia/Index";
-    ViewBag.MenuLevel = " > Listado De Tomas De Asistencia";
+    ViewBag.MenuLevel = " > Reporte De Alumnos";
 }
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#miModal">
-    Tomar Asistencia
-</button>
+<div style="border: 1px solid red; width: 100%; display: flex; justify-content: flex-end">
+    <div>
+        <p>Select Alumnos</p>
+    </div>
+</div>
 <br /><br />
 
 <table id="tomadeasistencias" class="table table-bordered table-striped">
@@ -47,7 +48,7 @@
 
                     <div class="form-group">
                         <label>Fecha</label>
-                        <input type="date" id="Fecha" name="Fecha" class="form-control" onchange="FechaActive()" />                        
+                        <input type="date" id="Fecha" name="Fecha" class="form-control" onchange="FechaActive()" />
                     </div>
 
                     <div class="form-group">

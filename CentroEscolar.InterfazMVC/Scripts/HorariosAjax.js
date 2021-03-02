@@ -1,11 +1,12 @@
 ﻿$(function () {
-    Cargar();
+    Cargar();    
 });
 
 $('#frmHorarios').submit(function (event) {
     event.preventDefault();
     Guardar();
 });
+
 
 function Cargar() {
     $.ajax({
@@ -28,13 +29,14 @@ function Cargar() {
                 html += "</tr>";
             });
 
-            $("#horarios tbody").html(html);
+            $("#horarios tbody").html(html);            
         },
         error: function (error) {
             alert(error.responseText);
         }
     });
 }
+
 
 function VerDetalle(id) {
     $.ajax({

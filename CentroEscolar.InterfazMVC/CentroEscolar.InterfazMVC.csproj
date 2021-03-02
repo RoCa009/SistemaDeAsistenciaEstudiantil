@@ -92,10 +92,12 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\estilos.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\AdministradorAjax.js" />
+    <Content Include="Scripts\AlumnoAjax.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -110,7 +112,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AdministradorController.cs" />
+    <Compile Include="Controllers\ControllersSnacks\AlumnoController.cs" />
+    <Compile Include="Controllers\ControllersSnacks\PanelAdministradorController.cs" />
+    <Compile Include="Controllers\ControllersSnacks\GradosSeccionesMenuController.cs" />
+    <Compile Include="Controllers\ControllersSnacks\InicioAppController.cs" />
+    <Compile Include="Controllers\ControllersSnacks\PanelTomaDeAsistenciaController.cs" />
+    <Compile Include="Controllers\ControllersSnacks\ReporteController.cs" />
     <Compile Include="Controllers\HorarioController.cs" />
     <Compile Include="Controllers\MatriculaDeAlumnoController.cs" />
     <Compile Include="Controllers\ProfesorController.cs" />
@@ -132,8 +139,13 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\TomaDeAsistencia\Index.cshtml" />
     <Content Include="Views\MatriculaDeAlumno\Index.cshtml" />
-    <Content Include="Views\Administrador\Index.cshtml" />
+    <Content Include="Views\PanelAdministrador\Index.cshtml" />
     <Content Include="Views\Profesor\Index.cshtml" />
+    <Content Include="Views\GradosSeccionesMenu\Index.cshtml" />
+    <Content Include="Views\InicioApp\Index.cshtml" />
+    <Content Include="Views\PanelTomaDeAsistencia\Index.cshtml" />
+    <Content Include="Views\Alumno\Index.cshtml" />
+    <Content Include="Views\Reporte\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -12,7 +12,7 @@ namespace CentroEscolar.AccesoADatos
 {
     public class GradoDAL
     {
-        // Metodo Leer
+        // Metodo Obtener
         public List<Grado> Obtener()
         {
             List<Grado> ListaGrados = new List<Grado>();
@@ -26,7 +26,8 @@ namespace CentroEscolar.AccesoADatos
 
                 while (reader.Read())
                 {
-                    ListaGrados.Add(new Grado (reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5)));
+                    ListaGrados.Add(new Grado (reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2), 
+                        reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5)));
                 }
 
                 con.Close();

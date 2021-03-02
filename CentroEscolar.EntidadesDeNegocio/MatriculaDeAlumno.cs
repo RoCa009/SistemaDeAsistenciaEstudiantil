@@ -10,7 +10,7 @@ namespace CentroEscolar.EntidadesDeNegocio
     {
         public int Id { get; set; }
 
-        public string DUI { get; set; }
+        public string DUIEncargado { get; set; }
 
         public string NombreEncargado { get; set; }
 
@@ -40,12 +40,12 @@ namespace CentroEscolar.EntidadesDeNegocio
 
         public MatriculaDeAlumno() { }
 
-        public MatriculaDeAlumno(int pId, string pDUI, string pNombreEncargado, string pNombresAlumno, string pApellidosAlumno,
+        public MatriculaDeAlumno(int pId, string pDUIEncargado, string pNombreEncargado, string pNombresAlumno, string pApellidosAlumno,
             int pEdad, string pSexo, string pDireccion, string pTelefono, string pCorreo,
             int pIdProfesor, int pIdGrado, int pIdSeccion, int pIdHorario, int pIdAula)
         {
             Id = pId;
-            DUI = pDUI;
+            DUIEncargado = pDUIEncargado;
             NombreEncargado = pNombreEncargado;
             NombresAlumno = pNombresAlumno;
             ApellidosAlumno = pApellidosAlumno;

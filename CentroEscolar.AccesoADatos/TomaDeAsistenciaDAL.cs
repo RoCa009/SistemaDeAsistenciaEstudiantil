@@ -26,7 +26,7 @@ namespace CentroEscolar.AccesoADatos
 
                 while (reader.Read())
                 {
-                    ListaTomaDeAsistencias.Add(new TomaDeAsistencia(reader.GetInt32(0), reader.GetDateTime(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5), 
+                    ListaTomaDeAsistencias.Add(new TomaDeAsistencia(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5), 
                         reader.GetString(6), reader.GetString(7), reader.GetString(8) ));
                 }
 
@@ -112,7 +112,7 @@ namespace CentroEscolar.AccesoADatos
                 if (reader.Read())
                 {
                     tomadeasistencia.Id = reader.GetInt32(0);
-                    tomadeasistencia.Fecha = reader.GetDateTime(1);
+                    tomadeasistencia.Fecha = reader.GetString(1);
                     tomadeasistencia.IdProfesor = reader.GetInt32(2);
                     tomadeasistencia.IdAlumno = reader.GetInt32(3);
                     tomadeasistencia.IdGrado = reader.GetInt32(4);

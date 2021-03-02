@@ -1,0 +1,220 @@
+﻿
+@{
+    ViewBag.Title = "Inicio";
+
+    ViewBag.Section = "Asistity Web";
+    ViewBag.SectionLink = "#";
+    ViewBag.MenuLevel = "";
+}
+
+<div style="display: flex; justify-content: space-around; align-items: center; border: 1px solid transparent;">
+    <div style="border: 1px solid transparent; width: 35%; display: flex; justify-content: center">
+
+
+
+        <div className="col-lg-3 col-md-6 col-ms-12">
+            <div class="CardTeam">
+                <img class="BackgroundImgAdmin" src="https://firebasestorage.googleapis.com/v0/b/tenedores-81bf7.appspot.com/o/asistity-assets%2Fadmin-menu.png?alt=media&token=da1e3b14-1afc-4758-8cb6-17f232d411f0">
+                <div class="InformationTeam">
+                    <center>
+                        <h4>Administración</h4>
+
+                        <p class="administradorP">
+                            Agregue, edite y elimine información de los alumnos, profesores y demás en el panel de administración.
+                        </p>
+                        <br />
+
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; margin-bottom: 15px">
+                            <svg style="color: #0094B3; margin-right: 10px;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                            </svg>
+                            <input type="text" class="txtAdmin" id="inputAdministrador" placeholder="Usuario" />
+                        </div>
+
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; margin-bottom: 15px" ">
+                            <svg style="color: #0094B3; margin-right: 10px;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                                <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+                            </svg>
+                            <input type="password" class="txtAdmin" id="inputContrasena" placeholder="Contraseña" />
+                        </div>
+
+
+                    </center>
+                    <a href="#" onclick="IngresarAdministrador()" class="btn" style="margin-left: 40px; background-color: #0094B3; color: white">
+                        Ingresar
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div style="border: 1px solid transparent; width: 35%">
+
+
+        <div className="col-lg-3 col-md-6 col-ms-12">
+            <div class="CardTeam">
+                <img class="BackgroundImgAdmin" src="https://firebasestorage.googleapis.com/v0/b/tenedores-81bf7.appspot.com/o/asistity-assets%2Fteacher-menu.png?alt=media&token=14fb2037-e08f-464a-8864-72e0def1a4c6">
+                <div class="InformationTeam">
+                    <center>
+                        <h4>Toma De Asistencia</h4>
+                        <p class="administradorP">
+                            Tome nota de la asistencia de sus alumnos, controle sus reportes y lleve un mejor seguimiento de los mismos.
+                        </p>
+                        <br />
+
+                        <div style="display: flex; flex-direction: row; justify-content: space-around; align-items: center; margin-bottom: 15px; width: 85%;">
+                            <div>
+                                <label class="labelTakeAsistity">Grado</label>
+                                <select class="sltakeAsistity" id="selectGrado">
+                                    <option value="">Seleccionar</option>
+                                    <option value="1°">1°</option>
+                                    <option value="2°">2°</option>
+                                    <option value="3°">3°</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="labelTakeAsistity">Sección</label>
+                                <select class="sltakeAsistity" id="selectSeccion">
+                                    <option value="">Seleccionar</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; margin-bottom: 15px" ">
+                            <svg style="color: #f28637; margin-right: 10px;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                                <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+                            </svg>
+                            <input type="password" class="txtTakeAsistity" id="inputContrasenaTomaDeAsistencia" placeholder="Contraseña" />
+                        </div>
+                    </center>
+                    <a href="#" onclick="IngresarTomaDeAsistencia()" class="btn" style="margin-left: 40px; background-color: #f28637; color: white">
+                        Ingresar
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+    function IngresarAdministrador() {
+        if ($("#inputAdministrador").val() == "" || $("#inputContrasena").val() == "") {
+            alert("Por favor, verifica tus datos de administador");
+        } else {
+            window.location.href = "../PanelAdministrador/Index";
+        }
+    }
+
+    function IngresarTomaDeAsistencia() {
+        if ($("#selectGrado").val() == "" || $("#selectSeccion").val() == "" || $("#inputContrasenaTomaDeAsistencia").val() == "") {
+            alert("Por favor, verifica tus datos de ingreso");
+        } else {
+            window.location.href = "../PanelTomaDeAsistencia/Index";
+        }
+    }
+</script>
+
+<style>
+    .txtAdmin {
+        background-color: #f3f7fe;
+        border: 1px solid #0094B3;
+        border-radius: 35px;
+        width: 70%;
+        height: 30px;
+        color: #0094B3;
+        outline: none;
+    }
+
+        .txtAdmin::placeholder {
+            color: #0094B3;
+        }
+
+    .sltakeAsistity {
+        background-color: #fef8f3;
+        border: 1px solid #f28637;
+        border-radius: 35px;
+        height: 30px;
+        color: #f28637;
+        outline: none;
+    }
+
+    .txtTakeAsistity {
+        background-color: #fef8f3;
+        border: 1px solid #f28637;
+        border-radius: 35px;
+        width: 70%;
+        height: 30px;
+        color: #f28637;
+        outline: none;
+    }
+
+        .txtTakeAsistity::placeholder {
+            color: #f28637;
+        }
+
+    .labelTakeAsistity {
+        color: #f28637;
+    }
+
+    /* PERFIL DE ADMINISTRADOR - CARD */
+    .CardTeam {
+        background-color: red;
+        position: relative;
+        display: block;
+        margin: 15px auto;
+        width: 100%;
+        height: 560px;
+        background: #fff;
+        border-radius: 10px;
+        box-sizing: border-box;
+        transition: 700ms all;
+        /*transition: all 0.7s ease;*/
+    }
+
+        .CardTeam:hover {
+            transform: scale(1.1);
+        }
+
+    .BackgroundImgAdmin {
+        display: block;
+        width: 100%;
+        height: 50%;
+        border-radius: 10px;
+        object-fit: contain;
+    }
+
+    .PerfilImgAdmin {
+        position: absolute;
+        background-color: #fff;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 10px auto;
+        z-index: 2;
+        width: 40%;
+        border-radius: 100%;
+        border: 5px solid #0094B3;
+    }
+
+    .InformationTeam {
+        margin-top: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .TituloTeam {
+        text-decoration: underline;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+</style>

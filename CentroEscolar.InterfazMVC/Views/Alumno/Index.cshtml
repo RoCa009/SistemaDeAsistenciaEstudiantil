@@ -1,25 +1,18 @@
-﻿
-@{
-    ViewBag.Title = "Administración";
+﻿@{
+    ViewBag.Title = "Toma De Asistencia";
 
-    ViewBag.Section = "Administración";
-    ViewBag.SectionLink = "../PanelAdministrador/Index";
-    ViewBag.MenuLevel = "> Matricula De Alumnos";
+    ViewBag.Section = "Toma De Asistencia";
+    ViewBag.SectionLink = "../PanelTomaDeAsistencia/Index";
+    ViewBag.MenuLevel = " > Alumnos";
 }
 
-<h2>Listado De Matriculas De Alumnos</h2>
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#miModal">
-    Matricular Alumno
-</button>
+<h2>Listado De Alumnos - 2° "C"</h2>
 <br /><br />
 
 <table id="matriculadealumnos" class="table table-bordered table-striped">
     <thead>
         <tr>
             <td>Id</td>
-            <td>DUI Encargado</td>
-            <td>Nombre Encargado</td>
             <td>Nombres Alumno</td>
             <td>Apellidos Alumno</td>
             <td>Edad</td>
@@ -27,12 +20,7 @@
             <td>Direccion</td>
             <td>Telefono</td>
             <td>Correo</td>
-            <td>IdProfesor</td>
-            <td>IdGrado</td>
-            <td>IdSeccion</td>
-            <td>IdHorario</td>
-            <td>IdAula</td>
-            <td>Acciones</td>
+            <td style="color: gray">Acciones</td>
         </tr>
     </thead>
     <tbody></tbody>
@@ -155,5 +143,7 @@
 </div>
 <!-- Fin de la ventana Modal -->
 
-<script src="~/Scripts/MatriculaDeAlumnoAjax.js"></script>
+<script src="~/Scripts/AlumnoAjax.js"></script>
+
+
 

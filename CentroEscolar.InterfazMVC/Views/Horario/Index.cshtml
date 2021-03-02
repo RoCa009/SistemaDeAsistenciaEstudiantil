@@ -1,17 +1,19 @@
 ﻿
 @{
     ViewBag.Title = "Administración";
+
+    ViewBag.Section = "Administración";
+    ViewBag.SectionLink = "../PanelAdministrador/Index";
+    ViewBag.MenuLevel = "> Horarios";
 }
 
-@{
-    ViewBag.MenuLevel = "Administración > Horarios";
-}
 
 <h2>Listado De Horarios</h2>
 
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#miModal">
     Nuevo Horario
 </button>
+
 <br /><br />
 
 <table id="horarios" class="table table-bordered table-striped">
@@ -26,6 +28,7 @@
     </thead>
     <tbody></tbody>
 </table>
+
 
 <!----------------- Ventana Modal ------------------------------------->
 <div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -49,12 +52,12 @@
 
                     <div class="form-group">
                         <label>Hora Entrada</label>
-                        <input type="text" id="HoraEntrada" name="HoraEntrada" class="form-control" />
+                        <input type="time" id="HoraEntrada" name="HoraEntrada" class="form-control" />
                     </div>
 
                     <div class="form-group">
                         <label>Hora Salida</label>
-                        <input type="text" id="HoraSalida" name="HoraSalida" class="form-control" />
+                        <input type="time" id="HoraSalida" name="HoraSalida" class="form-control" />
                     </div>
 
                     <div class="form-group">

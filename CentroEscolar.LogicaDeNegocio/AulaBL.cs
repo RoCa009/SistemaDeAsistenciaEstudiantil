@@ -11,31 +11,32 @@ namespace CentroEscolar.LogicaDeNegocio
 {
     public class AulaBL
     {
-        //Creación del objeto Aula
+        // Objeto
         AulaBL aula = new AulaBL();
-
-        //Uso del método Obtener
+        // Obtener
         public List<Aula> Obtener()
         {
             return aula.Obtener();
         }
-
-        //Uso del método Agregar
+        // Agregar
         public int Agregar (Aula pAula)
         {
             return aula.Agregar(pAula);
         }
-
-        //Uso del método Modificar
+        // Modificar
         public int Modificar (Aula pAula)
         {
             return aula.Modificar(pAula);
         }
-
-        //Uso del método Eliminar
+        // Eliminar
         public int Eliminar (Aula pAula)
         {
             return aula.Eliminar(pAula);
+        }
+        // ObtenerPorId
+        public Aula Ingresar(Aula pAula)
+        {
+            return aula.Ingresar(pAula);
         }
     }
 }
