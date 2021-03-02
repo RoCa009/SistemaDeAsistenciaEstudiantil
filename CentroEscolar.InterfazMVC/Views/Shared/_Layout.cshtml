@@ -3,29 +3,58 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asistity Web - @ViewBag.Title</title>
+    <title>@ViewBag.Title / Asistity Web</title>
+    <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/tenedores-81bf7.appspot.com/o/asistity-assets%2FAW.png?alt=media&token=d2a13439-a2cd-4761-9634-b0f48c49e390" />
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;900&display=swap" rel="stylesheet">
 </head>
+<style>
+    #aMenu {
+        font-family: 'Nunito', sans-serif;
+        font-size: 15pt;
+        color: #535353;
+        font-weight: 600;
+    }
+
+    .disabledaMenuLevel {
+        pointer-events: none;
+        cursor: default;
+
+        font-family: 'Nunito', sans-serif;
+        font-size: 15pt;
+        color: #535353;
+        font-weight: 600;
+    }
+
+
+</style>
 <body>
 
     <!-- Image and text -->
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light" style="display: flex; justify-content: flex-start; align-items: center;">
         <a class="navbar-brand" href="#">
             <img src="https://firebasestorage.googleapis.com/v0/b/tenedores-81bf7.appspot.com/o/asistity-assets%2FAW.png?alt=media&token=a941d80e-ec98-4519-894c-cb66e86fc910"
-                 width="130" height="auto" class="d-inline-block align-top" alt="" style="margin-left: 80px">
-            @ViewBag.MenuLevel
+                 width="150" height="auto" class="d-inline-block align-top" alt="" style="margin-left: 80px;">
+            <a href="@ViewBag.SectionLink" id="aMenu">@ViewBag.Section</a>
+            <a href="#" class="disabledaMenuLevel" style="margin-left: 5px">@ViewBag.MenuLevel</a>
         </a>
     </nav>
-
+    
     <div class="container body-content">
         @RenderBody()
+        <br />
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        <footer style="display: flex; align-items: center; justify-content: flex-start;">
+            <img style="width: 50px; height: 50px; border-radius: 50px; margin-right: 10px" src="https://firebasestorage.googleapis.com/v0/b/tenedores-81bf7.appspot.com/o/avatars%2FKtzvf3s6Kmhq8B9nFMvJsSc5K2p2?alt=media&token=196049aa-ddb7-40bb-ab5c-49f821eec41d" alt="Alternate Text" />
+            <img style="width: 50px; height: 50px; border-radius: 50px" src="https://avatars.githubusercontent.com/u/54336765?s=400&u=8318a8320a35f86ea843360c83f0cb726b63ad3e&v=4" alt="Alternate Text" />
+            <p style="margin-top: 10px; margin-left: 5px">&copy; @DateTime.Now.Year - Aplicación ASP.NET - LenninLemus & RodrigoCaballero</p>
         </footer>
+        <br />
     </div>
 
     <script src="~/Scripts/bootstrap.min.js"></script>

@@ -1,5 +1,10 @@
 ﻿$(function () {
-    Cargar();
+    Cargar();    
+});
+
+$('#frmProfesores').submit(function (event) {
+    event.preventDefault();
+    Guardar();
 });
 
 function Cargar() {
@@ -35,3 +40,120 @@ function Cargar() {
         }
     });
 }
+
+function VerDetalle(id) {
+    $.ajax({
+        url: "/Profesor/BuscarPorId?pId="+id,
+        type: "GET",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (data) {            
+            $('#Id').val(data.Id);
+            $('#DUI').val(data.DUI);
+            $('#Nombres').val(data.Nombres);
+            $('#Apellidos').val(data.Apellidos);            
+            $('#Edad').val(data.Edad);            
+            $('#Sexo').val(data.Sexo);            
+            $('#Direccion').val(data.Direccion);            
+            $('#Telefono').val(data.Telefono);            
+            $('#Correo').val(data.Correo);     
+            
+            $('#exampleModalLabel').text("Modificar Profesor");
+            $('#btnGuardar').val("Guardar Cambios");            
+        },
+        error: function (error) {
+            alert("Parece que hubo un error al hacer la petición");
+            alert(error)
+        }
+    });
+}
+
+
+function Guardar() {
+    if ($('#DUI').val() == "" ||
+    $('#Nombres').val() == "" ||
+    $('#Apellidos').val() == "" ||
+    $('#Edad').val() == "" ||
+    $('#Sexo').val() == "" ||
+    $('#Direccion').val() == "" ||
+    $('#Telefono').val() == "" ||
+    $('#Correo').val() == "") {
+        alert("Todos los campos son requeridos!");
+    } else {        
+        var url = ' ';
+        var profesor = {
+            Id: $('#Id').val(),
+            DUI: $('#DUI').val(),
+            Nombres: $('#Nombres').val(),
+            Apellidos: $('#Apellidos').val(),
+            Edad: $('#Edad').val(),
+            Sexo: $('#Sexo').val(),
+            Direccion: $('#Direccion').val(),
+            Telefono: $('#Telefono').val(),
+            Correo: $('#Correo').val()
+        }
+
+        if (profesor.Id) {
+            url = '/Profesor/Modificar';
+        } else {
+            url = '/Profesor/Agregar';
+        }
+
+        $.ajax({
+            url: url,
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            data: JSON.stringify(profesor),
+            success: function (data) {
+                if ($('#btnGuardar').val() == "Guardar Cambios") {
+                    alert("Se guardaron los cambios");
+                } else if ($('#btnGuardar').val() == "Guardar") {
+                    alert("Registro guardado con éxito");
+                }                
+                $('#miModal').modal('hide');
+                Cargar();
+                Limpiar();
+            },
+            error: function (error) {
+                alert("No se pudo guardar el registro");
+            }
+        });
+    }
+}
+
+function Limpiar() {
+    $('#Id').val("");
+    $('#DUI').val("");
+    $('#Nombres').val("");
+    $('#Apellidos').val("");
+    $('#Edad').val("");
+    $('#Sexo').val("");
+    $('#Direccion').val("");
+    $('#Telefono').val("");
+    $('#Correo').val("");
+    $('#exampleModalLabel').text("Crear Profesor");
+    $('#btnGuardar').val("Guardar");
+}
+
+function Eliminar(id) {
+    var resp = confirm("¿Estas seguro que quieres eliminar este registro?");
+    if (resp) {
+        $.ajax({
+            url: "/Profesor/Eliminar?pId="+id,
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                alert("Registro eliminado con éxito");                
+                Cargar();
+                Limpiar();
+            },
+            error: function (error) {
+                alert("No se pudo eliminar el registro");
+            }
+        });
+    }
+}
+
+

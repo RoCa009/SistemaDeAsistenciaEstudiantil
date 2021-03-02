@@ -1,15 +1,20 @@
 ﻿using System;
+
 using System.Collections.Generic;
+
 using System.Linq;
+
 using System.Web;
+
 using System.Web.Mvc;
 
 using CentroEscolar.EntidadesDeNegocio;
+
 using CentroEscolar.LogicaDeNegocio;
 
 namespace CentroEscolar.InterfazMVC.Controllers
 {
-    public class AdministradorController : Controller
+    public class PanelAdministradorController : Controller
     {
         AdministradorBL administrador = new AdministradorBL();
 
@@ -18,6 +23,7 @@ namespace CentroEscolar.InterfazMVC.Controllers
         {
             return View();
         }
+
 
         // Obtener 
         public JsonResult Obtener()

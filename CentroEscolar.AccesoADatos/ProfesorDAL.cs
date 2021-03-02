@@ -96,7 +96,7 @@ namespace CentroEscolar.AccesoADatos
         // Metodo BuscarPorId
         public static Profesor BuscarPorId(int pId)
         {
-            Profesor Profesor = new Profesor();
+            Profesor profesor = new Profesor();
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
@@ -108,22 +108,22 @@ namespace CentroEscolar.AccesoADatos
 
                 if (reader.Read())
                 {
-                    Profesor.Id = reader.GetInt32(0);
-                    Profesor.DUI = reader.GetString(1);
-                    Profesor.Nombres = reader.GetString(2);
-                    Profesor.Apellidos = reader.GetString(3);
-                    Profesor.Edad = reader.GetInt32(4);
-                    Profesor.Sexo = reader.GetString(5);
-                    Profesor.Direccion = reader.GetString(6);
-                    Profesor.Telefono = reader.GetString(7);
-                    Profesor.Correo = reader.GetString(8);
+                    profesor.Id = reader.GetInt32(0);
+                    profesor.DUI = reader.GetString(1);
+                    profesor.Nombres = reader.GetString(2);
+                    profesor.Apellidos = reader.GetString(3);
+                    profesor.Edad = reader.GetInt32(4);
+                    profesor.Sexo = reader.GetString(5);
+                    profesor.Direccion = reader.GetString(6);
+                    profesor.Telefono = reader.GetString(7);
+                    profesor.Correo = reader.GetString(8);
 
                 }
 
                 con.Close();
             }
 
-            return Profesor;
+            return profesor;
         }
     }
 }

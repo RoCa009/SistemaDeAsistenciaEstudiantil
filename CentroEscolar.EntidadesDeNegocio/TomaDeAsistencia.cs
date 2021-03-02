@@ -10,7 +10,7 @@ namespace CentroEscolar.EntidadesDeNegocio
     {
         public int Id { get; set; }
 
-        public DateTime Fecha { get; set; }
+        public string Fecha { get; set; }
 
         public int IdProfesor { get; set; }
 
@@ -29,7 +29,7 @@ namespace CentroEscolar.EntidadesDeNegocio
 
         public TomaDeAsistencia() { }
 
-        public TomaDeAsistencia(int pId, DateTime pFecha, int pIdProfesor, int pIdAlumno, int pIdGrado, int pIdSeccion, 
+        public TomaDeAsistencia(int pId, string pFecha, int pIdProfesor, int pIdAlumno, int pIdGrado, int pIdSeccion, 
             string pAsistencia, string pLlegoTarde, string pJustificacionLlegadaTarde)
         {
             Id = pId;

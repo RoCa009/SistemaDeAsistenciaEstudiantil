@@ -1,0 +1,149 @@
+﻿@{
+    ViewBag.Title = "Toma De Asistencia";
+
+    ViewBag.Section = "Toma De Asistencia";
+    ViewBag.SectionLink = "../PanelTomaDeAsistencia/Index";
+    ViewBag.MenuLevel = " > Alumnos";
+}
+
+<h2>Listado De Alumnos - 2° "C"</h2>
+<br /><br />
+
+<table id="matriculadealumnos" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Nombres Alumno</td>
+            <td>Apellidos Alumno</td>
+            <td>Edad</td>
+            <td>Sexo</td>
+            <td>Direccion</td>
+            <td>Telefono</td>
+            <td>Correo</td>
+            <td style="color: gray">Acciones</td>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<!----------------- Ventana Modal ------------------------------------->
+<div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Matricula De Alumno</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="Limpiar()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <form id="frmMatriculaDeAlumnos">
+                    <input type="hidden" id="Id" name="Id" />
+
+                    <div class="form-group">
+                        <label>DUIEncargado</label>
+                        <input type="text" id="DUIEncargado" name="DUIEncargado" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>NombreEncargado</label>
+                        <input type="text" id="NombreEncargado" name="NombreEncargado" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>NombresAlumno</label>
+                        <input type="text" id="NombresAlumno" name="NombresAlumno" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>ApellidosAlumno</label>
+                        <input type="text" id="ApellidosAlumno" name="ApellidosAlumno" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Edad</label>
+                        <input type="number" id="Edad" name="Edad" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Sexo</label>
+                        <select id="Sexo" name="Sexo" class="form-control">
+                            <option value="">Seleccionar</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Direccion</label>
+                        <input type="text" id="Direccion" name="Direccion" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Telefono</label>
+                        <input type="text" id="Telefono" name="Telefono" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Correo</label>
+                        <input type="text" id="Correo" name="Correo" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>IdProfesor</label>
+                        <select id="IdProfesor" name="IdProfesor" class="form-control">
+                            <option value="1">Seleccionar</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>IdGrado</label>
+                        <select id="IdGrado" name="IdGrado" class="form-control">
+                            <option value="1">Seleccionar</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>IdSeccion</label>
+                        <select id="IdSeccion" name="IdSeccion" class="form-control">
+                            <option value="1">Seleccionar</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>IdHorario</label>
+                        <select id="IdHorario" name="IdHorario" class="form-control">
+                            <option value="1">Seleccionar</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>IdAula</label>
+                        <select id="IdAula" name="IdAula" class="form-control">
+                            <option value="1">Seleccionar</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <input type="submit" id="btnGuardar" value="Guardar" class="btn btn-primary" />
+                    </div>
+
+
+                </form>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="Limpiar()">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fin de la ventana Modal -->
+
+<script src="~/Scripts/AlumnoAjax.js"></script>
+
+
+

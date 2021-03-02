@@ -11,31 +11,32 @@ namespace CentroEscolar.LogicaDeNegocio
 {
     public class GradoBL
     {
-        //Creación del objeto grado
-        GradoBL grado = new GradoBL();
-
-        //Uso del método Obtener
+        // Objeto
+        GradoDAL grado = new GradoDAL();
+        // Obtener
         public List<Grado> Obtener()
         {
             return grado.Obtener();
         }
-
-        //Uso del método Agregar
+        // Agregar
         public int Agregar (Grado pGrado)
         {
             return grado.Agregar(pGrado);
         }
-
-        //Uso del método Modificar 
+        // Modificar
         public int Modificar (Grado pGrado)
         {
             return grado.Modificar(pGrado);
         }
-
-        //Uso del método Eliminar 
-        public int Eliminar (Grado pGrado)
+        // Eliminar
+        public int Eliminar (int pId)
         {
-            return grado.Eliminar(pGrado);
+            return grado.Eliminar(pId);
+        }
+        // BuscarPorId
+        public Grado BuscarPorId(int pId)
+        {
+            return GradoDAL.BuscarPorId(pId);
         }
     }
 }

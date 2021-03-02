@@ -24,5 +24,32 @@ namespace CentroEscolar.InterfazMVC.Controllers
         {
             return Json(matriculadealumno.Obtener(), JsonRequestBehavior.AllowGet);
         }
+
+        // BuscarPorId
+        public JsonResult BuscarPorId(int pId)
+        {
+            return Json(matriculadealumno.BuscarPorId(pId), JsonRequestBehavior.AllowGet);
+        }
+
+        // Agregar
+        [HttpPost]
+        public JsonResult Agregar(MatriculaDeAlumno pMatriculaDeAlumno)
+        {
+            return Json(matriculadealumno.Agregar(pMatriculaDeAlumno), JsonRequestBehavior.AllowGet);
+        }
+
+        // Modificar
+        [HttpPost]
+        public JsonResult Modificar(MatriculaDeAlumno pMatriculaDeAlumno)
+        {
+            return Json(matriculadealumno.Modificar(pMatriculaDeAlumno), JsonRequestBehavior.AllowGet);
+        }
+
+        // Eliminar
+        [HttpPost]
+        public JsonResult Eliminar(int pId)
+        {
+            return Json(matriculadealumno.Eliminar(pId));
+        }
     }
 }
