@@ -12,7 +12,7 @@ namespace CentroEscolar.LogicaDeNegocio
     public class AulaBL
     {
         //Creación del objeto Aula
-        AulaBL aula = new AulaBL();
+        AulaDAL aula = new AulaDAL();
 
         //Uso del método Obtener
         public List<Aula> Obtener()
@@ -33,9 +33,15 @@ namespace CentroEscolar.LogicaDeNegocio
         }
 
         //Uso del método Eliminar
-        public int Eliminar (Aula pAula)
+        public int Eliminar (int pId)
         {
-            return aula.Eliminar(pAula);
+            return aula.Eliminar(pId);
+        }
+
+        //Uso de Buscar por ID
+        public Aula BuscarPorId(int pId)
+        {
+            return AulaDAL.BuscarPorId(pId);
         }
     }
 }

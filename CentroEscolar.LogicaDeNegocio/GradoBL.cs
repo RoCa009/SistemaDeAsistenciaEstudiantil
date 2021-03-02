@@ -12,7 +12,7 @@ namespace CentroEscolar.LogicaDeNegocio
     public class GradoBL
     {
         //Creación del objeto grado
-        GradoBL grado = new GradoBL();
+        GradoDAL grado = new GradoDAL();
 
         //Uso del método Obtener
         public List<Grado> Obtener()
@@ -33,9 +33,15 @@ namespace CentroEscolar.LogicaDeNegocio
         }
 
         //Uso del método Eliminar 
-        public int Eliminar (Grado pGrado)
+        public int Eliminar (int pId)
         {
-            return grado.Eliminar(pGrado);
+            return grado.Eliminar(pId);
+        }
+
+        //Uso del método BuscarPorID
+        public Grado BuscarPorId(int pId)
+        {
+            return GradoDAL.BuscarPorId(pId);
         }
     }
 }

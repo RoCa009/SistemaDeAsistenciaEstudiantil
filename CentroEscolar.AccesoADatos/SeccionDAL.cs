@@ -26,7 +26,7 @@ namespace CentroEscolar.AccesoADatos
 
                 while (reader.Read())
                 {
-                    ListaSecciones.Add(new Seccion(reader.GetInt32(0), reader.GetInt32(1)));
+                    ListaSecciones.Add(new Seccion(reader.GetInt32(0), reader.GetString(1)));
                 }
 
                 con.Close();
@@ -42,7 +42,7 @@ namespace CentroEscolar.AccesoADatos
             using (SqlConnection con = Conexion.Conectar())
             {
                 con.Open();
-                string sentencia = "insert into secciones(secciones) values('{0}')";
+                string sentencia = "insert into secciones(seccionasignada) values('{0}')";
                 string ssql = string.Format(sentencia, pSeccion.SeccionAsignada);
                 SqlCommand comando = new SqlCommand(ssql, con);
                 comando.CommandType = CommandType.Text;
@@ -108,7 +108,7 @@ namespace CentroEscolar.AccesoADatos
                 if (reader.Read())
                 {
                     Seccion.Id = reader.GetInt32(0);
-                    Seccion.SeccionAsignada = reader.GetInt32(1);
+                    Seccion.SeccionAsignada = reader.GetString(1);
                 }
 
                 con.Close();

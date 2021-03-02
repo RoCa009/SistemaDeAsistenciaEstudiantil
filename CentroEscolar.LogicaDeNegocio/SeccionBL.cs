@@ -12,7 +12,7 @@ namespace CentroEscolar.LogicaDeNegocio
     public class SeccionBL
     {
         //Creación del objeto seccion
-        SeccionBL seccion = new SeccionBL();
+        SeccionDAL seccion = new SeccionDAL();
 
         //Uso del método Obtener
         public List<Seccion> Obtener()
@@ -33,9 +33,15 @@ namespace CentroEscolar.LogicaDeNegocio
         }
 
         //Uso del método Eliminar 
-        public int Eliminar (Seccion pSeccion)
+        public int Eliminar (int pId)
         {
-            return seccion.Eliminar(pSeccion);
+            return seccion.Eliminar(pId);
+        }
+
+        //Uso del método BuscarPorId
+        public Seccion BuscarPorId(int pId)
+        {
+            return SeccionDAL.BuscarPorId(pId);
         }
     }
 }
