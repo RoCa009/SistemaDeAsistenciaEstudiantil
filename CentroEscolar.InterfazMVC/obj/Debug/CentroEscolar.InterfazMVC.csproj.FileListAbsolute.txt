@@ -79,6 +79,7 @@ C:\Users\rcaba\Desktop\SistemaAsistencia2\CentroEscolar.InterfazMVC\obj\Debug\Ce
 C:\Users\rcaba\Desktop\SistemaAsistencia2\CentroEscolar.InterfazMVC\obj\Debug\CentroEscolar.InterfazMVC.csproj.CopyComplete
 C:\Users\rcaba\Desktop\SistemaAsistencia2\CentroEscolar.InterfazMVC\obj\Debug\CentroEscolar.InterfazMVC.dll
 C:\Users\rcaba\Desktop\SistemaAsistencia2\CentroEscolar.InterfazMVC\obj\Debug\CentroEscolar.InterfazMVC.pdb
+C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.InterfazMVC\obj\Debug\CentroEscolar.InterfazMVC.csproj.CoreCompileInputs.cache
 C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.InterfazMVC\bin\CentroEscolar.InterfazMVC.dll.config
 C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.InterfazMVC\bin\CentroEscolar.InterfazMVC.dll
 C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.InterfazMVC\bin\CentroEscolar.InterfazMVC.pdb
@@ -156,7 +157,6 @@ C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.Interfa
 C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.InterfazMVC\bin\es\System.Web.Helpers.resources.dll
 C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.InterfazMVC\bin\es\System.Web.Mvc.resources.dll
 C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.InterfazMVC\obj\Debug\CentroEscolar.InterfazMVC.csprojAssemblyReference.cache
-C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.InterfazMVC\obj\Debug\CentroEscolar.InterfazMVC.csproj.CoreCompileInputs.cache
 C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.InterfazMVC\obj\Debug\CentroEscolar.InterfazMVC.csproj.CopyComplete
 C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.InterfazMVC\obj\Debug\CentroEscolar.InterfazMVC.dll
 C:\Users\Lenni\source\repos\SistemaDeAsistenciaEstudiantil\CentroEscolar.InterfazMVC\obj\Debug\CentroEscolar.InterfazMVC.pdb

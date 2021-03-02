@@ -11,35 +11,22 @@ namespace CentroEscolar.LogicaDeNegocio
 {
     public class ProfesorBL
     {
-<<<<<<< HEAD
 
         ProfesorDAL profesor = new ProfesorDAL();
 
-        public List<Profesor> Obtener()
-        {
-            return profesor.Obtener();
-        }
-
-        //Uso del método Agregar
-=======
-        // Objeto
-        ProfesorDAL profesor = new ProfesorDAL();        
         // Obtener
         public List<Profesor> Obtener()
         {
             return profesor.Obtener();
         } 
+
         // Agregar
->>>>>>> 481bd8e96a6ce383d0595cc443a7fd422ce3522d
         public int Agregar(Profesor pProfesor)
         {
             return profesor.Agregar(pProfesor);
         }
-<<<<<<< HEAD
 
-=======
-        // Modificar
->>>>>>> 481bd8e96a6ce383d0595cc443a7fd422ce3522d
+        //Modificar
         public int Modificar(Profesor pProfesor)
         {
             return profesor.Modificar(pProfesor);
