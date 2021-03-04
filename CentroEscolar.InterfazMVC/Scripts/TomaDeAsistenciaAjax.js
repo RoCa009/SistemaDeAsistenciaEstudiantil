@@ -1,10 +1,14 @@
-﻿$(function () {
+﻿$(function () {        
     Cargar();
 
     CargarProfesores();
     CargarAlumnos();
-    //CargarGrados();
-    //CargarSecciones();
+    CargarGrados();
+    CargarSecciones();
+
+    $('#IdProfesor').val("D");
+    $('#IdGrado').val(data.IdGrado);
+    $('#IdSeccion').val(data.IdSeccion);
 });
 
 $('#frmTomaDeAsistencia').submit(function (event) {
@@ -229,7 +233,7 @@ function CargarGrados() {
         success: function (data) {
             var html = "";
             $.each(data, function (key, item) {
-                html += "<option value='" + item.Id + "'>" + item.Id + "</option>";
+                html += "<option value='" + item.Id + "'>" + item.GradoAsignado + "</option>";
             });
             $('#IdGrado').append(html);
         },

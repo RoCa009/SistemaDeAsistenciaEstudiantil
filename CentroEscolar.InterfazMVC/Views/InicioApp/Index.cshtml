@@ -7,7 +7,7 @@
     ViewBag.MenuLevel = "";
 }
 
-<div style="display: flex; justify-content: space-around; align-items: center; border: 1px solid transparent;">
+<div style="display: flex; justify-content: space-around; align-items: center; border: 1px solid transparent; margin-top: -80px">
     <div style="border: 1px solid transparent; width: 35%; display: flex; justify-content: center">
 
 
@@ -29,7 +29,7 @@
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                                 <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
                             </svg>
-                            <input type="text" class="txtAdmin" id="inputAdministrador" placeholder="Usuario" />
+                            <input type="text" class="txtAdmin" id="inputAdministrador" placeholder="Usuario" autocomplete="off" />
                         </div>
 
                         <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; margin-bottom: 15px" ">
@@ -72,15 +72,16 @@
                                     <option value="1°">1°</option>
                                     <option value="2°">2°</option>
                                     <option value="3°">3°</option>
+                                    <option value="4°">4°</option>
                                 </select>
                             </div>
                             <div>
                                 <label class="labelTakeAsistity">Sección</label>
                                 <select class="sltakeAsistity" id="selectSeccion">
                                     <option value="">Seleccionar</option>
-                                    <option value="A">A</option>
-                                    <option value="B">B</option>
-                                    <option value="C">C</option>
+                                    <option value="A">"A"</option>
+                                    <option value="B">"B"</option>
+                                    <option value="C">"C"</option>
                                 </select>
                             </div>
 
@@ -218,3 +219,4 @@
         margin-bottom: 15px;
     }
 </style>
+

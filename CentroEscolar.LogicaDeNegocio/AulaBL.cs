@@ -12,7 +12,7 @@ namespace CentroEscolar.LogicaDeNegocio
     public class AulaBL
     {
         // Objeto
-        AulaBL aula = new AulaBL();
+        AulaDAL aula = new AulaDAL();
         // Obtener
         public List<Aula> Obtener()
         {
@@ -29,14 +29,14 @@ namespace CentroEscolar.LogicaDeNegocio
             return aula.Modificar(pAula);
         }
         // Eliminar
-        public int Eliminar (Aula pAula)
+        public int Eliminar (int pId)
         {
-            return aula.Eliminar(pAula);
+            return aula.Eliminar(pId);
         }
-        // ObtenerPorId
-        public Aula Ingresar(Aula pAula)
+        // BuscarPorId
+        public Aula BuscarPorId(int pId)
         {
-            return aula.Ingresar(pAula);
+            return AulaDAL.BuscarPorId(pId);
         }
     }
 }

@@ -38,5 +38,10 @@ namespace CentroEscolar.LogicaDeNegocio
         {
             return TomaDeAsistenciaDAL.BuscarPorId(pId);
         }
+        // BuscarPorIdAlumno
+        public TomaDeAsistencia BuscarPorIdAlumno(int pId)
+        {
+            return TomaDeAsistenciaDAL.BuscarPorIdAlumno(pId);
+        }
     }
 }

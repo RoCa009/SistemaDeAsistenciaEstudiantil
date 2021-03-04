@@ -6,122 +6,56 @@
     ViewBag.MenuLevel = " > Reporte De Alumnos";
 }
 
-<div style="border: 1px solid red; width: 100%; display: flex; justify-content: flex-end">
+<div style="border: 1px solid transparent; width: 100%; display: flex; justify-content: space-between">
     <div>
-        <p>Select Alumnos</p>
+        <h5>Nota: Selecciona un alumno para ver un reporte completo de los días asistidos, </h5>
+        <h5>no asistidos y sus respectivas justificaciones.</h5>
+    </div>
+    <div>
+        <label style="text-align: right">Alumnos</label>
+        <select id="IdAlumno" name="IdAlumno" class="form-control" onchange="ActivarReporteAlumno(document.getElementById('IdAlumno').value)">
+            <option value="0">Seleccionar</option>
+        </select>
     </div>
 </div>
-<br /><br />
+<br /><br />      
 
-<table id="tomadeasistencias" class="table table-bordered table-striped">
+      <h4>Datos Del Estudiante</h4>
+<table id="alumnos" class="table table-bordered table-striped">
     <thead>
         <tr>
-            <td>Id</td>
+            <td>Nombre Alumno</td>
+            <td>Edad</td>
+            <td>Sexo</td>
+            <td>Dirección</td>
+            <td>Teléfono</td>
+            <td>Correo</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr> 
+            <td id="NombresApellidos"></td>
+            <td id="Edad"></td>
+            <td id="Sexo"></td>
+            <td id="Direccion"></td>
+            <td id="Telefono"></td>
+            <td id="Correo"></td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>Listado De Asistencias</h4>
+<table id="fechasalumno" class="table table-bordered table-striped">
+    <thead>
+        <tr>
             <td>Fecha</td>
-            <td>IdProfesor</td>
-            <td>IdAlumno</td>
-            <td>IdGrado</td>
-            <td>IdSeccion</td>
-            <td>Asistencia</td>
-            <td>Llego Tarde</td>
-            <td>Justificacón De Llegada Tarde</td>
-            <td>Acciones</td>
+            <td style="color: #0094B3">Asistencia</td>
+            <td>Llegó Tarde</td>
+            <td>Justificación Llegada Tarde</td>
         </tr>
     </thead>
     <tbody></tbody>
 </table>
 
-<!----------------- Ventana Modal ------------------------------------->
-<div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Toma De Asistencia</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="Limpiar()">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
 
-                <form id="frmTomaDeAsistencia">
-                    <input type="hidden" id="Id" name="Id" />
-
-                    <div class="form-group">
-                        <label>Fecha</label>
-                        <input type="date" id="Fecha" name="Fecha" class="form-control" onchange="FechaActive()" />
-                    </div>
-
-                    <div class="form-group">
-                        <label>IdProfesor</label>
-                        <select id="IdProfesor" name="IdProfesor" class="form-control">
-                            <option value="1">Seleccionar</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>IdAlumno</label>
-                        <select id="IdAlumno" name="IdAlumno" class="form-control">
-                            <option value="1">Seleccionar</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>IdGrado</label>
-                        <select id="IdGrado" name="IdGrado" class="form-control">
-                            <option value="1">Seleccionar</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>IdSeccion</label>
-                        <select id="IdSeccion" name="IdSeccion" class="form-control">
-                            <option value="1">Seleccionar</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Asistencia</label>
-                        <select id="Asistencia" name="Asistencia" class="form-control" onchange="AsistenciaActiva()">
-                            <option value="">Seleccionar</option>
-                            <option value="Si">Si</option>
-                            <option value="No">No</option>
-                            <option value="Si, con llegada tarde">Si, con llegada tarde</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>LlegoTarde</label>
-                        <select id="LlegoTarde" name="LlegoTarde" class="form-control" disabled>
-                            <option value=""></option>
-                            <option value="Si">Si</option>
-                            <option value="No">No</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>JustificacionLlegadaTarde</label>
-                        <textarea id="JustificacionLlegadaTarde" name="JustificacionLlegadaTarde"
-                                  class="form-control" disabled></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="submit" id="btnGuardar" value="Guardar" class="btn btn-primary" />
-                    </div>
-
-                </form>
-
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="Limpiar()">Cerrar</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Fin de la ventana Modal -->
-
-<script>
-
-</script>
-<script src="~/Scripts/TomaDeAsistenciaAjax.js"></script>
+<script src="~/Scripts/ReporteAjax.js"></script>

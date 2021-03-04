@@ -9,11 +9,10 @@ using CentroEscolar.LogicaDeNegocio;
 
 namespace CentroEscolar.InterfazMVC.Controllers
 {
-    public class HorarioController : Controller
+    public class GradoController : Controller
     {
-        HorarioBL horario = new HorarioBL();
-
-        // Mostrar
+        GradoBL grado = new GradoBL();
+        // GET: Grado
         public ActionResult Index()
         {
             return View();
@@ -21,32 +20,32 @@ namespace CentroEscolar.InterfazMVC.Controllers
         // Obtener 
         public JsonResult Obtener()
         {
-            return Json(horario.Obtener(), JsonRequestBehavior.AllowGet);
+            return Json(grado.Obtener(), JsonRequestBehavior.AllowGet);
         }
         // BuscarPorId
         public JsonResult BuscarPorId(int pId)
         {
-            return Json(horario.BuscarPorId(pId), JsonRequestBehavior.AllowGet);
+            return Json(grado.BuscarPorId(pId), JsonRequestBehavior.AllowGet);
         }
 
         [HttpPost]
-        public JsonResult Agregar(Horario pHorario)
+        public JsonResult Agregar(Grado pGrado)
         {
-            return Json(horario.Agregar(pHorario), JsonRequestBehavior.AllowGet);
+            return Json(grado.Agregar(pGrado), JsonRequestBehavior.AllowGet);
         }
 
         // Modificar
         [HttpPost]
-        public JsonResult Modificar(Horario pHorario)
+        public JsonResult Modificar(Grado pGrado)
         {
-            return Json(horario.Modificar(pHorario), JsonRequestBehavior.AllowGet);
+            return Json(grado.Modificar(pGrado), JsonRequestBehavior.AllowGet);
         }
 
         // Eliminar
         [HttpPost]
         public JsonResult Eliminar(int pId)
         {
-            return Json(horario.Eliminar(pId));
+            return Json(grado.Eliminar(pId));
         }
     }
 }

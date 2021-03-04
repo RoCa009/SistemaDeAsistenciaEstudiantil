@@ -98,29 +98,36 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\AdministradorAjax.js" />
     <Content Include="Scripts\AlumnoAjax.js" />
+    <Content Include="Scripts\AulaAjax.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\GradoAjax.js" />
     <Content Include="Scripts\HorariosAjax.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\MatriculaDeAlumnoAjax.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\ProfesorAjax.js" />
+    <Content Include="Scripts\ReporteAjax.js" />
+    <Content Include="Scripts\SeccionAjax.js" />
     <Content Include="Scripts\TomaDeAsistenciaAjax.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AulaController.cs" />
     <Compile Include="Controllers\ControllersSnacks\AlumnoController.cs" />
     <Compile Include="Controllers\ControllersSnacks\PanelAdministradorController.cs" />
     <Compile Include="Controllers\ControllersSnacks\GradosSeccionesMenuController.cs" />
     <Compile Include="Controllers\ControllersSnacks\InicioAppController.cs" />
     <Compile Include="Controllers\ControllersSnacks\PanelTomaDeAsistenciaController.cs" />
     <Compile Include="Controllers\ControllersSnacks\ReporteController.cs" />
+    <Compile Include="Controllers\GradoController.cs" />
     <Compile Include="Controllers\HorarioController.cs" />
     <Compile Include="Controllers\MatriculaDeAlumnoController.cs" />
     <Compile Include="Controllers\ProfesorController.cs" />
+    <Compile Include="Controllers\SeccionController.cs" />
     <Compile Include="Controllers\TomaDeAsistenciaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -146,6 +153,9 @@
     <Content Include="Views\PanelTomaDeAsistencia\Index.cshtml" />
     <Content Include="Views\Alumno\Index.cshtml" />
     <Content Include="Views\Reporte\Index.cshtml" />
+    <Content Include="Views\Aula\Index.cshtml" />
+    <Content Include="Views\Grado\Index.cshtml" />
+    <Content Include="Views\Seccion\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

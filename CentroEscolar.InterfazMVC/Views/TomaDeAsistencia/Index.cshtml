@@ -4,8 +4,10 @@
 
     ViewBag.Section = "Toma De Asistencia";
     ViewBag.SectionLink = "../PanelTomaDeAsistencia/Index";
-    ViewBag.MenuLevel = " > Listado De Tomas De Asistencia";
+    ViewBag.MenuLevel = " > Tomar Asistencia";
 }
+
+<h2>Listado De Tomas De Asistencia</h2>
 
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#miModal">
     Tomar Asistencia
@@ -51,30 +53,30 @@
                     </div>
 
                     <div class="form-group">
-                        <label>IdProfesor</label>
-                        <select id="IdProfesor" name="IdProfesor" class="form-control">
-                            <option value="1">Seleccionar</option>
+                        <label>Profesor</label>
+                        <select id="IdProfesor" name="IdProfesor" class="form-control" disabled>
+                            <option value="1">Norma Elizabeth Varela Lopez</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label>IdAlumno</label>
+                        <label>Alumno</label>
                         <select id="IdAlumno" name="IdAlumno" class="form-control">
-                            <option value="1">Seleccionar</option>
+                            <option value="1">David Enrique Caseres Campos</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label>IdGrado</label>
-                        <select id="IdGrado" name="IdGrado" class="form-control">
-                            <option value="1">Seleccionar</option>
+                        <label>Grado</label>
+                        <select id="IdGrado" name="IdGrado" class="form-control" disabled>
+                            <option value="2">2°</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label>IdSeccion</label>
-                        <select id="IdSeccion" name="IdSeccion" class="form-control">
-                            <option value="1">Seleccionar</option>
+                        <label>Sección</label>
+                        <select id="IdSeccion" name="IdSeccion" class="form-control" disabled>
+                            <option value="3">"C"</option>
                         </select>
                     </div>
 
@@ -121,6 +123,8 @@
 <!-- Fin de la ventana Modal -->
 
 <script>
-
+    document.getElementById('Fecha').valueAsDate = new Date();
+    
+    
 </script>
 <script src="~/Scripts/TomaDeAsistenciaAjax.js"></script>

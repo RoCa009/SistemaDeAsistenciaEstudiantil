@@ -31,6 +31,12 @@ namespace CentroEscolar.InterfazMVC.Controllers
             return Json(tomadeasistencia.BuscarPorId(pId), JsonRequestBehavior.AllowGet);
         }
 
+        // BuscarPorId
+        public JsonResult BuscarPorIdAlumno(int pId)
+        {
+            return Json(tomadeasistencia.BuscarPorIdAlumno(pId), JsonRequestBehavior.AllowGet);
+        }
+
         // Agregar
         [HttpPost]
         public JsonResult Agregar(TomaDeAsistencia pTomaDeAsistencia)

@@ -2,9 +2,10 @@
     Cargar();
 
     CargarProfesores();
-    //CargarGrados();
-    //CargarSecciones();
+    CargarGrados();
+    CargarSecciones();
     CargarHorarios();
+    CargarAulas();
 });
 
 $('#frmMatriculaDeAlumnos').submit(function (event) {
@@ -228,7 +229,7 @@ function CargarGrados() {
             success: function (data) {
                 var html = "";
                 $.each(data, function (key, item) {
-                    html += "<option value='" + item.Id + "'>" + item.Id + "</option>";
+                    html += "<option value='" + item.Id + "'>" + item.GradoAsignado + "</option>";
                 });
                 $('#IdGrado').append(html);
             },
@@ -237,6 +238,8 @@ function CargarGrados() {
                 alert(error);
             }
         });
+
+
 }
 
 
@@ -279,3 +282,23 @@ function CargarHorarios() {
         }
     });
 }
+
+function CargarAulas() {
+    $.ajax({
+        url: "/Aula/Obtener",
+        type: "GET",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (data) {
+            var html = "";
+            $.each(data, function (key, item) {
+                html += "<option value='" + item.Id + "'>" + item.NumeroDeAula + "</option>";
+            });
+            $('#IdAula').append(html);
+        },
+        error: function (error) {
+            alert("Error al mostrar datos");
+        }
+    });
+}
+

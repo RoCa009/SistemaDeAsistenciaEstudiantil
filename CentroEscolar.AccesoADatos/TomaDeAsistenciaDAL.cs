@@ -35,7 +35,7 @@ namespace CentroEscolar.AccesoADatos
 
             return ListaTomaDeAsistencias;
         }
-      
+
         //Metodo Agregar
         public int Agregar(TomaDeAsistencia pTomaDeAsistencia)
         {
@@ -120,6 +120,30 @@ namespace CentroEscolar.AccesoADatos
                     tomadeasistencia.Asistencia = reader.GetString(6);
                     tomadeasistencia.LlegoTarde = reader.GetString(7);
                     tomadeasistencia.JustificacionLlegadaTarde = reader.GetString(8);
+                }
+
+                con.Close();
+            }
+
+            return tomadeasistencia;
+        }
+
+        // Metodo BuscarPorId
+        public static TomaDeAsistencia BuscarPorIdAlumno(int pId)
+        {
+            TomaDeAsistencia tomadeasistencia = new TomaDeAsistencia();
+            using (SqlConnection con = Conexion.Conectar())
+            {
+                con.Open();
+                string sentencia = "select fecha from tomadeasistencias where idalumno={0}";
+                string ssql = string.Format(sentencia, pId);
+                SqlCommand comando = new SqlCommand(ssql, con);
+                comando.CommandType = CommandType.Text;
+                IDataReader reader = comando.ExecuteReader();
+
+                if (reader.Read())
+                {                    
+                    tomadeasistencia.Fecha = reader.GetString(0);
                 }
 
                 con.Close();
